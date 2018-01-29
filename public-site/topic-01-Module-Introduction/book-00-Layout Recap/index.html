@@ -1,0 +1,514 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Module Introduction
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Layout Recap">
+      Layout Recap
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
+          Layout Recap
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-01-Add some Behaviour/index.html">
+          Add some Behaviour
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-02-Exercise/index.html">
+          Recap Exercise
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-00-JavaScript-Introduction/index.html">
+          JavaScript Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-01-Variables/index.html">
+          Variables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-02-Operators/index.html">
+          JavaScript Operators
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-03-Selection/index.html">
+          Selection
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-04-Loops/index.html">
+          Loops
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-05-Pop Up Boxes/index.html">
+          Pop Up Boxes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-06-Global Methods/index.html">
+          Global Methods
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-07-Exercise/index.html">
+          JavaScript Exercises
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-00-String-Manipulation/index.html">
+          String Manipulation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-01-Math-Object/index.html">
+          Math Object
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-02-Date-Object/index.html">
+          Date Object
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-03-Functions/index.html">
+          Functions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-04-Validation/index.html">
+          Input Validation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-05-Arrays/index.html">
+          Arrays
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Layout Recap">
+        <h1>Objectives</h1>
+<p>This lab will recap laying out a webpage using Bootstrap</p>
+<ul>
+<li><a href="#/01">Example</a></li>
+<li><a href="#/02">Files to include</a></li>
+<li><a href="#/03">The Layout</a></li>
+<li><a href="#/04">The Form</a></li>
+<li><a href="#/05">Styling The Form</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Example</h1>
+<p>We are firstly going to design this page with a form (centered) on the web page.</p>
+<p><img src="img/example.png" alt=""></p>
+<ul>
+<li>Create a folder called Week01.</li>
+<li>Download, extract and open the <a href="archives/lab01.zip">lab01</a> folder in Week01.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Files to include</h1>
+<ul>
+<li><p>Open <strong>form.html</strong> and include the following link to the required <strong>.css</strong> file before the <strong>.css</strong> file that is already there in the &lt;head&gt; section:</p>
+<pre><code>&lt;link href=&quot;css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+</li>
+<li><p>Include the following links to the required <strong>.js</strong> files before the closing &lt;body&gt; tag:</p>
+<pre><code>&lt;script src=&quot;js/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/popper.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>The Layout</h1>
+<p>The following style rules are already in the <strong>.css</strong> file  (<strong>style.css</strong>).</p>
+<pre><code>body {
+  background-color: #000;
+  font-family: &#39;Oswald&#39;, &#39;Futura&#39;, sans-serif;
+  margin: 0; 
+  padding: 0;
+}
+
+
+h1 {
+  background-image: url(../images/kinglogo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  height: 75px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  margin: 0 0 23px 0;
+}</code></pre>
+<p>Now add the following style for the <strong>container</strong> class, which will contain all the content on 50% of the screen centered. It has its own background colour
+also:</p>
+<pre><code>.container {
+  width:50%;
+  background-color: #403c3b;
+  padding: 0 1.5em 1em 1.5em;
+}</code></pre>
+<p>Save the file.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>The Form</h1>
+<p>In <strong>form.html</strong>, add a form tag as follows (after the &lt;h1&gt; element):</p>
+<pre><code>&lt;form method=&quot;post&quot; action=&quot;process.html&quot; id=&quot;formSignup&quot;&gt;
+&lt;/form&gt;</code></pre>
+<p>Add the following elements to the form.</p>
+<pre><code>&lt;h2&gt;Membership&lt;/h2&gt;
+&lt;!-- Select element with 3 option. Label (4 columns) and select element (8 columns)--&gt;       
+&lt;div class=&quot;form-group row&quot;&gt;
+ &lt;label for=&quot;package&quot; class=&quot;col-sm-4 col-form-label-sm&quot;&gt; Select a package: &lt;/label&gt;
+ &lt;div class=&quot;col-sm-8&quot;&gt;
+  &lt;select id=&quot;package&quot; class=&quot;form-control&quot;&gt;
+    &lt;option value=&quot;none&quot;&gt;Select an option&lt;/option&gt;
+    &lt;option value=&quot;annual&quot;&gt;1 year ($50)&lt;/option&gt;
+    &lt;option value=&quot;monthly&quot;&gt;1 month ($5)&lt;/option&gt;
+  &lt;/select&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Blank element--&gt;  
+&lt;div id=&quot;packageHint&quot; class=&quot;tip&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Checkbox option (coupon) --&gt;  
+&lt;div class=&quot;form-group row&quot;&gt;
+ &lt;div class=&quot;form-check&quot;&gt;
+  &lt;label for=&quot;coupon&quot; class=&quot;form-check-label checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;coupon&quot; &gt;
+      Have you a coupon (10% discount)?
+  &lt;/label&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Checkbox option (terms and conditions) --&gt; 
+&lt;div class=&quot;form-group row&quot;&gt;
+ &lt;div class=&quot;form-check&quot;&gt;
+  &lt;label for=&quot;terms&quot; class=&quot;form-check-label checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;terms&quot; &gt;
+      Check to agree to terms &amp;amp; conditions
+  &lt;/label&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Blank element--&gt;  
+&lt;div id=&quot;termsHint&quot; class=&quot;warning&quot;&gt;&lt;/div&gt;
+
+&lt;!-- Submit element--&gt;  
+&lt;div class=&quot;form-group row&quot;&gt;
+ &lt;div class=&quot;col-sm-6&quot;&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Sign Up&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Save the file.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Styling The Form</h1>
+<p>Add the following style rules to the <strong>.css</strong> file (<strong>style.css</strong>):</p>
+<pre><code>label {
+  color: #fff;
+  font-size: 24px;
+}
+
+#terms {
+  margin-top:2em;
+}
+
+#termsHint {
+  margin-top:-1.5em;
+  background-image: url(&#39;../images/warning.png&#39;);
+  background-repeat: no-repeat;
+  background-position: 2px 14px;
+  padding: 10px 0 0 22px;
+}
+
+#packageHint {
+  background-image: url(&#39;../images/hint.png&#39;);
+  background-repeat: no-repeat;
+  background-position: 2px 5px;
+  padding-left: 22px;
+}
+
+.checkbox {
+  font-size: 16px;
+}
+
+#packageHint, #termsHint {
+  color: #fff;
+}</code></pre>
+<p>Save the file.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

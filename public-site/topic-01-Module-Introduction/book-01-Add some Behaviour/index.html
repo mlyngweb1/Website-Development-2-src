@@ -1,0 +1,426 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Module Introduction
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Add some Behaviour">
+      Add some Behaviour
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
+          Layout Recap
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-01-Add some Behaviour/index.html">
+          Add some Behaviour
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-02-Exercise/index.html">
+          Recap Exercise
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-00-JavaScript-Introduction/index.html">
+          JavaScript Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-01-Variables/index.html">
+          Variables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-02-Operators/index.html">
+          JavaScript Operators
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-03-Selection/index.html">
+          Selection
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-04-Loops/index.html">
+          Loops
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-05-Pop Up Boxes/index.html">
+          Pop Up Boxes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-06-Global Methods/index.html">
+          Global Methods
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-07-Exercise/index.html">
+          JavaScript Exercises
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-00-String-Manipulation/index.html">
+          String Manipulation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-01-Math-Object/index.html">
+          Math Object
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-02-Date-Object/index.html">
+          Date Object
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-03-Functions/index.html">
+          Functions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-04-Validation/index.html">
+          Input Validation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-05-Arrays/index.html">
+          Arrays
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Add some Behaviour">
+        <h1>Objectives</h1>
+<p>This lab will recap laying out a webpage using Bootstrap</p>
+<ul>
+<li><a href="#/01">Adding JavaScript to the code</a></li>
+<li><a href="#/02">Selecting the elements</a></li>
+<li><a href="#/03">Selecting an option</a></li>
+<li><a href="#/04">Submitting the Form</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Adding JavaScript to the code</h1>
+<p>In Lab01 we have a folder called <strong>.js</strong> and in it is a file called <strong>form.js</strong>. We are going to add code to this file.</p>
+<p>In the file <strong>form.html</strong> add a link to the <strong>form.js</strong> file as follows  (after the links to the other <strong>.js</strong> files):</p>
+<pre><code>&lt;script src=&quot;js/form.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Selecting the elements</h1>
+<p>We are going to add code to the <strong>form.js</strong> file that will allow JavaScript to refer to (select) elements on the webpage. Each element can be
+selected using their unique <strong>id</strong>:</p>
+<pre><code>var elForm, elSelectPackage, elPackageHint, elTerms, elTermsHint, elcoupon, price; // Declare variables
+
+elForm          = document.getElementById(&#39;formSignup&#39;);    //form      
+elSelectPackage = document.getElementById(&#39;package&#39;);       // select element
+elPackageHint   = document.getElementById(&#39;packageHint&#39;);   // Blank element underneath the select option
+elTerms         = document.getElementById(&#39;terms&#39;);         // terms and conditions checkbox
+elTermsHint     = document.getElementById(&#39;termsHint&#39;);     // Blank element underneath the terms and conditions checkbox
+elcoupon        = document.getElementById(&#39;coupon&#39;);        // coupon checkbox</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Selecting an option</h1>
+<p>Now we are going to add code to display a message when the user changes the option.
+When the user selects an option from the select element, the program responds to this event by displaying a message and noting the price.</p>
+<pre><code>function packageHint() {                                 // Declare function
+  var pack = this.options[this.selectedIndex].value;     // Get selected option
+  if (pack === &#39;monthly&#39;) {                              // If monthly package
+    elPackageHint.innerHTML = &#39;Save $10 if you pay for 1 year!&#39;;//Show this msg
+    price=60;                                            // Set price to 60
+  } else {                                               // Otherwise
+    elPackageHint.innerHTML = &#39;Wise choice!&#39;;            // Show this message
+    price = 50;                                          // Set price to 50
+  }
+}</code></pre>
+<p>This function will not run until it is called, so we will add code that reponds to the event of the user selecting an option from the select element as follows:</p>
+<pre><code>elSelectPackage.addEventListener(&#39;change&#39;, packageHint, false);//event listener for select element change - calls packageHint() function</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Submitting the Form</h1>
+<p>We now want to add code to respond to the user when the user submits the selection.</p>
+<p>Before the membership is processed a few checks must be carried out:</p>
+<ol>
+<li>Has the user made a selection?</li>
+<li>Has the user agreed to the terms and conditions?</li>
+</ol>
+<p>Once these are checked the final price can be calculated.</p>
+<pre><code>function checkTerms(event) {                                   // Declare function
+  var selection = elSelectPackage.options[elSelectPackage.selectedIndex].value; // Get selected option
+  if (selection == &quot;none&quot;) {                                   // if no selection is made
+      alert(&quot;You must make a selection&quot;);                  // Display dialog box with error message
+      event.preventDefault();                              // Don&#39;t submit form
+      return;                                                  // Exit the function
+  }
+
+
+  if (!elTerms.checked) {                                // If terms and conditions checkbox ticked
+    elTermsHint.innerHTML = &#39;You must agree to the terms.&#39;; // Show message
+    event.preventDefault();                              // Don&#39;t submit form
+    return;                                              // Exit the function
+  }
+  if (elcoupon.checked) {                                // If coupon checkbox ticked 
+    price = price * .90;                                 // Apply discount of 10%.
+  }
+  alert(&quot;The membership is \u20AC&quot; + price);             // Display membership charge
+}</code></pre>
+<p>This function will not run until it is called, so we will add code that reponds to the event of the user submitting the membership form (clicking the submit button) as follows:</p>
+<pre><code>elForm.addEventListener(&#39;submit&#39;, checkTerms, false);//event listener for submit button - calls checkTerms() function</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
