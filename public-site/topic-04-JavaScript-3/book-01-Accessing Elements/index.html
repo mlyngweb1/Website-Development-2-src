@@ -300,9 +300,9 @@ body
 </li>
 <li><p><a href="#/02">Return one or more Elements <code>-</code> getElementsByTagName()</a></p>
 </li>
-<li><p><a href="#/03">Return one or more Elements <code>-</code> ggetElementsByClassName()</a></p>
+<li><p><a href="#/03">Return one or more Elements <code>-</code> getElementsByClassName()</a></p>
 </li>
-<li><p><a href="#/04">Return one or more Elements <code>-</code> getSelectorAll()</a></p>
+<li><p><a href="#/04">Return one or more Elements <code>-</code> querySelectorAll()</a></p>
 </li>
 <li><p><a href="#/05">Return one or more Elements <code>-</code> Refer to a specific item</a></p>
 </li>
@@ -333,7 +333,7 @@ var el = document.getElementById(&#39;one&#39;);
 el.className = &#39;cool&#39;;</code></pre>
 <p><a href="archives/Class Files/get-element-by-id.html" target = "_blank">getElementById() Example</a>.</p>
 <h2>querySelector()</h2>
-<p>Uses CSS selector syntax that would select one or more elements. This method retruns only the first of the matching elements.</p>
+<p>Uses CSS selector syntax that would select one or more elements. This method returns only the first of the matching elements.</p>
 <p><strong>HTML</strong></p>
 <pre><code>&lt;h1 id=&quot;header&quot;&gt;List King&lt;/h1&gt;
 &lt;h2&gt;Buy groceries&lt;/h2&gt;
@@ -359,7 +359,7 @@ el.className = &#39;cool&#39;;</code></pre>
 <p><strong>getElementsByTagName(), getElementsByClassName()</strong> and <strong>querySelectorAll()</strong> can search an entire document and return more than one element (as a NodeList).</p>
 <p>The NodeList object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.</p>
 <h2>getElementsByTagName()</h2>
-<p>Select all elements on the page with the specifed tag name. </p>
+<p>Select all elements on the page with the specified tag name. </p>
 <p><strong>HTML</strong></p>
 <pre><code>&lt;h1 id=&quot;header&quot;&gt;List King&lt;/h1&gt;
 &lt;h2&gt;Buy groceries&lt;/h2&gt;
@@ -410,7 +410,7 @@ if (elements.length &gt; 2) {                            // If 3 or more are fou
      
       <div  class="ui tab segment lab" data-tab="04">
         <h1>Return one or more Elements</h1>
-<h2>getSelectorAll()</h2>
+<h2>querySelectorAll()</h2>
 <p>Uses CSS selector syntax to select one or more elements and returns all of those that match.</p>
 <p><strong>HTML</strong></p>
 <pre><code>&lt;h1 id=&quot;header&quot;&gt;List King&lt;/h1&gt;
@@ -430,7 +430,7 @@ el.className = &#39;cool&#39;;
 // The third li element is then selected and changed.
 var els = document.querySelectorAll(&#39;li.hot&#39;);
 els[1].className = &#39;cool&#39;;</code></pre>
-<p><a href="archives/Class Files/query-selector-all.html" target = "_blank">getSelectorAll() Example</a>.</p>
+<p><a href="archives/Class Files/query-selector-all.html" target = "_blank">querySelectorAll() Example</a>.</p>
 <p>In the following <a href="archives/Class Files/node-list.html" target = "_blank">example</a>, all list items with class of <em>hot</em> are set to <em>cool</em>.</p>
 <pre><code>var hotItems = document.querySelectorAll(&#39;li.hot&#39;); // Store NodeList in array
 if (hotItems.length &gt; 0) {                          // If it contains items

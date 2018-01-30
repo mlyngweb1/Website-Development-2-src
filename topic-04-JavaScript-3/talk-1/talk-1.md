@@ -1,3 +1,3 @@
 # Lecture
 
-In this lecture, you will learn about more JavaScript features.
+In this lecture, you will learn about the Document Object Model, accessing elements, and event handling.
