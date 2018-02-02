@@ -16,19 +16,13 @@ else document.write("<p>The valid entered was invalid</p>");
 
 
 function isFilled(field) {
- if (field==null || field.length == 0 ||  (!isnotNumeric(field))) {
+ if (field==null || field.length == 0 ||  (isNaN(field))) {
      return false;
   }
  return true;
 }
 
-function isnotNumeric(num) {
-  if (isNaN(num)){
-    return false;
-  } else {
-    return true;
-  }
-}
+
 </script>
 </body>
 </html>

@@ -297,18 +297,10 @@ else document.write(&quot;&lt;p&gt;The valid entered was invalid&lt;/p&gt;&quot;
 
 
 function isFilled(field) {
- if (field==null || field.length == 0 ||  (!isnotNumeric(field))) {
+ if (field==null || field.length == 0 ||  (isNaN(field))) {
      return false;
   }
  return true;
-}
-
-function isnotNumeric(num) {
-  if (isNaN(num)){
-    return false;
-  } else {
-    return true;
-  }
 }
 &lt;/script&gt;</code></pre>
 
