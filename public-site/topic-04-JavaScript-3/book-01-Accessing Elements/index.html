@@ -428,14 +428,11 @@ if (elements.length &gt; 2) {                            // If 3 or more are fou
    &lt;li id=&quot;four&quot;&gt;balsamic vinegar&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 <p><strong>JavaScript</strong></p>
-<pre><code>// querySelector only returns the first match.
-var el = document.querySelector(&#39;li.hot&#39;);
-el.className = &#39;cool&#39;;
-
-// querySelectorAll returns a NodeList.
-// The third li element is then selected and changed.
+<pre><code>// querySelectorAll returns a NodeList.
+// The first and third li elements are selected and changed.
 var els = document.querySelectorAll(&#39;li.hot&#39;);
-els[1].className = &#39;cool&#39;;</code></pre>
+els[0].className = &#39;cool&#39;;
+els[2].className = &#39;cool&#39;;</code></pre>
 <p><a href="archives/Class Files/query-selector-all.html" target = "_blank">querySelectorAll() Example</a>.</p>
 <p>In the following <a href="archives/Class Files/node-list.html" target = "_blank">example</a>, all list items with class of <em>hot</em> are set to <em>cool</em>.</p>
 <pre><code>var hotItems = document.querySelectorAll(&#39;li.hot&#39;); // Store NodeList in array
