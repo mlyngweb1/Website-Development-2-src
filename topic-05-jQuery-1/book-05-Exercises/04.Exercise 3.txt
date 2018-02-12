@@ -1,6 +1,6 @@
-# Exercise Three:
+# Exercise Two:
 
-### Exercise 3.1:
+### Exercise 2.1:
 
 - Download, extract and open the [Lab02](archives/lab02.zip) folder.
 - Open the **exercise1.htm** file in your text editor.
