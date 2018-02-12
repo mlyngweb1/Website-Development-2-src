@@ -342,7 +342,7 @@ body
 &lt;/div&gt;</code></pre>
 <p><code>.html()</code> works like the DOM&#39;s innerHTML property. It gets the html contents (innerHTML) of the first matched element. To retrieve the HTML currently inside the selection, just add .html() after the jQuery selection, as in the following <a href="archives/examples/content.htm" target = "_ blank">example</a>:</p>
 <pre><code class="lang-js">alert($(&#39;#errors&#39;).html());</code></pre>
-<p>This example produces <code>&lt;h2&gt;Errors&lt;/h2&gt;</code>. When you use the html() function in this way, you can make a copy of the HTML inside a specific element.</p>
+<p>This example produces an alert with the text <code>&lt;h2&gt;Errors&lt;/h2&gt;</code>. When you use the html() function in this way, you can make a copy of the HTML inside a specific element.</p>
 <p>If you supply a string as an argument to .html(), you can set the html contents of every matched element. For example: <code>$(&#39;#errors&#39;).html(&#39;&lt;h3&gt;More Errors&lt;/h3&gt;&#39;);</code> This can be seen in the following <a href="archives/examples/content1.htm" target = "_ blank">example</a>.</p>
 <h2>.text()</h2>
 <p>text() returns the combined text contents of all matched elements as can be seen in the following example.
@@ -353,7 +353,8 @@ If you supply a string as an argument to .text(), you can set the text contents 
 <p>As an <a href="archives/examples/content3.htm" target = "_ blank">example</a>, we will add a fruit list item to the end of an already existing list:</p>
 <pre><code class="lang-js">$(&#39;#fruits&#39;).append(&#39;&lt;li&gt;Orange&lt;/li&gt;&#39;);</code></pre>
 <h2>.prepend()</h2>
-<p>prepend() is just like append(), but adds HTML after the opening tag of the selected element. As an <a href="archives/examples/content4.htm" target = "_ blank">example</a>, we will add a fruit list item to the start of an already existing list: <code>$(&#39;#fruits&#39;).prepend(&#39;&lt;li&gt;Orange&lt;/li&gt;&#39;);</code></p>
+<p>prepend() is just like append(), but adds HTML after the opening tag of the selected element. As an <a href="archives/examples/content4.htm" target = "_ blank">example</a>, we will add a fruit list item to the start of an already existing list:</p>
+<pre><code class="lang-js">$(&#39;#fruits&#39;).prepend(&#39;&lt;li&gt;Orange&lt;/li&gt;&#39;);</code></pre>
 <h2>before() and after()</h2>
 <p>If you want to add HTML just outside of a selection, either before the selected element&#39;s opening tag or directly after the element&#39;s closing tag, use the before() or after() functions. For example, it&#39;s common practice to check a text field in a form to make sure that the field is not empty when your visitor submits the form. Assume that the HTML for the field looks like the following before the form is submitted:</p>
 <pre><code class="lang-html">&lt;input type = &quot;text&quot; name =&quot;username&quot; id = &quot;username&quot;&gt;</code></pre>
