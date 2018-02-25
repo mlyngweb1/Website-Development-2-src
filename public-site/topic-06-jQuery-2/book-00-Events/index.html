@@ -7,8 +7,6 @@
 
      
 
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
@@ -117,7 +115,7 @@ body
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-       jQuery Part Two 
+       jQuery Part Two
     </a>
   </header>
   <div class="right tab-menu menu">
@@ -150,7 +148,6 @@ body
 
 <div class="ui segment pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    <br><br>
     
       
         <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
@@ -273,7 +270,7 @@ body
       
     
       
-        <a class="active item" href="../../topic-04-JavaScript-3/book-03-Events/index.html">
+        <a class="item" href="../../topic-04-JavaScript-3/book-03-Events/index.html">
           Events
         </a>
       
@@ -327,7 +324,7 @@ body
       
     
       
-        <a class="active item" href="../../topic-06-jQuery-2/book-00-Events/index.html">
+        <a class="item" href="../../topic-06-jQuery-2/book-00-Events/index.html">
           Events
         </a>
       
@@ -373,12 +370,15 @@ body
      
       <div  class="ui tab segment lab" data-tab="01">
         <h1>What are Events?</h1>
-<p>Web browsers are programmed to recognise basic actions like the page loading, someone moving a mouse, typing a key, or resizing the browser window. Each of the things that happen to a web page is an event. To make your web page interactive, you write programs that respond to events. In this way, you can make a <code>&lt;div&gt;</code> tag appear or disapper when a visitor clicks the mouse, a new image appear when she mouses over a link, or check the contents of a text field when she clicks a form&#39;s Submit button.</p>
-<p>Event handlers are methods that are called when &quot;something happens&quot; in HTML. The term &quot;triggered (or &quot;fired&quot;) by an event&quot; is often used.</p>
-<p>Preparing a web page to respond to an event is a two-stage process:</p>
+<p>Web browsers are programmed to recognise basic actions like the page loading, someone moving a mouse, typing a key, or resizing the browser window. 
+Each of the things that happen to a web page is an event. To make your web page interactive, you write programs that respond to events. In this way, 
+you can make a <strong>&lt;div</strong> tag appear or disappear when a visitor clicks the mouse, a new image appear when she mouses over a link, or check the contents of a text field when she clicks a form&#39;s Submit button.</p>
+<p>As you know, Event handlers are methods that are called when &quot;something happens&quot; in HTML. The term &quot;triggered (or &quot;fired&quot;) by an event&quot; is often used.</p>
+<p>Recall, preparing a web page to respond to an event is a three-stage process:</p>
 <ol>
-<li>Identify the page element that you wish to respond to an event.</li>
-<li>Assign an event and define a function to run when the event occurs.</li>
+<li>Select the element node(s) you want the script to respond to.</li>
+<li>Indicate which event on the selected node(s) will trigger the response.</li>
+<li>State the code you want to run when the event occurs.</li>
 </ol>
 
       </div>
@@ -500,9 +500,9 @@ body
 
 
 
-    <!--<footer>-->
+    <footer>
 
-    <!--</footer>-->
+    </footer>
     <script>
       $(document).ready(function() {
   $('img').addClass('ui image');

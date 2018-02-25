@@ -7,8 +7,6 @@
 
      
 
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
@@ -117,7 +115,7 @@ body
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-       jQuery Part Two 
+       jQuery Part Two
     </a>
   </header>
   <div class="right tab-menu menu">
@@ -150,7 +148,6 @@ body
 
 <div class="ui segment pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    <br><br>
     
       
         <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
@@ -339,7 +336,7 @@ body
       
     
       
-        <a class="active item" href="../../topic-06-jQuery-2/book-02-Plugins/index.html">
+        <a class="item" href="../../topic-06-jQuery-2/book-02-Plugins/index.html">
           jQuery Plugins
         </a>
       
@@ -394,14 +391,14 @@ body
 &lt;a href=&quot;images/image-3.jpg&quot; data-lightbox=&quot;roadtrip&quot;&gt;image #3&lt;/a&gt;
 &lt;a href=&quot;images/image-4.jpg&quot; data-lightbox=&quot;roadtrip&quot;&gt;image #4&lt;/a&gt;</code></pre>
 <h2>Changing the LightBox CSS property values</h2>
-<p>To use a different pointers/buttons/arrows, change the background property in the (lightbox.css file) to the following for <code>prev (.lb-nav a.lb-prev)</code>:</p>
+<p>To use a different pointers/buttons/arrows, change the background property in the (lightbox.css file) to the following for <strong>prev (.lb-nav a.lb-prev)</strong>:</p>
 <pre><code>background: url(../images/lightbox-btn-prev.gif) left 48% no-repeat;</code></pre>
-<p>And the following for <code>next (.lb-nav a.lb-next)</code>:</p>
+<p>And the following for <strong>next (.lb-nav a.lb-next)</strong>:</p>
 <pre><code>background: url(../images/lightbox-btn-next.gif) right 48% no-repeat;</code></pre>
-<p>To permanently display the arrows (or other image), remove the properties (opacity, -webkit-transition, -moz-transition, -o-transition, and transition) from both the prev and next CSS rules.</p>
+<p>To permanently display the arrows (or other image), remove the properties (opacity, -webkit-transition, -moz-transition, -o-transition, and transition) from both the <strong>prev</strong> and <strong>next</strong> CSS rules.</p>
 <h2>Adding options</h2>
 <p>We may add options to the lightbox plugin, as can be seen in the following <a href="archives/examples/lightbox/indexv2.htm" target = "_ blank">example</a>. For example instead of stopping when we reach the maximum number of images, the lightbox continues to iterate.</p>
-<p>All options can be found at the following site: <a href="http://lokeshdhakar.com/projects/lightbox2/#options" target = "_ blank"><code>http://lokeshdhakar.com/projects/lightbox2/#options</code></a></p>
+<p>All options can be found at the following site: <a href="http://lokeshdhakar.com/projects/lightbox2/#options" target = "_blank"><code>http://lokeshdhakar.com/projects/lightbox2/#options</code></a></p>
 <pre><code class="lang-js">&lt;script&gt;
     lightbox.option({
         &#39;fadeDuration&#39;:1200,
@@ -414,21 +411,21 @@ body
      
       <div  class="ui tab segment lab" data-tab="02">
         <h1>Adding a Date Picker</h1>
-<p>To aid the user adding a date, we will add a date picker. For this we will use the Twitter BootStrap datepicker and call it using jQuery.</p>
+<p>To aid the user adding a date, we will add a date picker. For this we will use the BootStrap datepicker and call it using jQuery.</p>
 <p>You will need the following files:</p>
 <ul>
 <li>css:css/bootstrap-datepicker.min.css</li>
 <li>js:js/bootstrap-datepicker.min.js</li>
 </ul>
-<pre><code class="lang-html">&lt;div class=&quot;form-group&quot;&gt;
- &lt;label for=&quot;dob&quot; class=&quot;col-sm-3 control-label&quot;&gt;Date of Birth&lt;/label&gt;
- &lt;div class=&quot;col-sm-4&quot;&gt;
-  &lt;div class=&quot;input-group date&quot;&gt;
-   &lt;input id=&quot;dob&quot; type=&quot;text&quot; name=&#39;dob&#39; class=&quot;form-control&quot;&gt;
-   &lt;label for=&quot;dob&quot; class=&quot;input-group-addon&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-calendar&quot;&gt;&lt;/span&gt;
-   &lt;/label&gt;
+<pre><code class="lang-html">&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label for=&quot;dob&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;Date of Birth&lt;/label&gt;
+  &lt;div class=&quot;col-sm-4&quot;&gt;
+       &lt;div class=&quot;input-group date&quot;&gt;
+          &lt;input id=&quot;dob&quot; type=&quot;text&quot; name=&#39;dob&#39; class=&quot;form-control&quot;&gt;
+          &lt;label for=&quot;dob&quot; class=&quot;input-group-addon&quot;&gt;&lt;i class=&quot;fa fa-calendar-check-o&quot;&gt;&lt;/i&gt;
+          &lt;/label&gt;
+       &lt;/div&gt;
   &lt;/div&gt;
- &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 <p>To call the datepicker, you need:</p>
 <pre><code class="lang-js">&lt;script&gt;
@@ -541,14 +538,16 @@ $(document).ready(function () {
   color: white !important;
   background-color:gray !important;
 }</code></pre>
-<p>To display the title attribute values as error messages on the web page, we assign the data-h5-errorid attribute in the input field and we add a corresponding error div. Error divs should be hidden in the HTML with display:none; -- h5Validate shows them when the corresponding field is marked invalid.The data-h5-errorid attribute is assigned a value and that value is the id of the error div. In h5Validate, you tell the client side code where to find the error div with the data-h5-errorid attribute. When the input field is marked invalid by the browser, the value of the title attribute is displayed in the error div. We attach a class also to style the error message.</p>
-<pre><code class="lang-html">&lt;div class =&quot;form-group&quot;&gt;
-     &lt;label for=&quot;name&quot; class=&quot;col-sm-3 control-label&quot;&gt;Name&lt;/label&gt;
-     &lt;div class=&quot;col-sm-9&quot;&gt;
-        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;name&quot;  id=&quot;name&quot; data-h5-errorid=&quot;invalid-name&quot; required pattern = &quot;[A-Z][a-z]+( [A-Z][a-z]+)?&quot; autofocus
-               title=&quot;Please enter a name (Surname optional) with First Letter capitalised&quot;&gt;
-        &lt;div id=&quot;invalid-name&quot; class=&quot;ui-state-error&quot;&gt;&lt;/div&gt;
-     &lt;/div&gt;
+<p>To display the title attribute values as error messages on the web page, we assign the data-h5-errorid attribute in the input field and we add a corresponding 
+error div. Error divs are hidden in the HTML and h5Validate shows them when the corresponding field is marked invalid. The data-h5-errorid attribute is assigned a value and that value is the id of the error div. In h5Validate, you tell the client side code where to find the error div with the data-h5-errorid attribute. When the input field is marked invalid by the browser, the value of the title attribute is displayed in the error div. We attach a class also to style the error message.</p>
+<pre><code class="lang-html">&lt;div class =&quot;form-group row&quot;&gt;
+   &lt;label for=&quot;name&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;Name&lt;/label&gt;
+   &lt;div class=&quot;col-sm-9&quot;&gt;
+     &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;name&quot;  id=&quot;name&quot; data-h5-errorid=&quot;invalid-name&quot; autofocus required 
+                pattern = &quot;[A-Z][a-z]+( [A-Z][a-z]+)?&quot;
+                title=&quot;Please enter a name (Surname optional) with First Letter capitalised&quot;&gt;
+     &lt;div id=&quot;invalid-name&quot; class=&quot;ui-state-error&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 <p>The corresponding style may be:</p>
 <pre><code class="lang-css">.ui-state-error {
@@ -602,9 +601,9 @@ $(document).ready(function () {
 
 
 
-    <!--<footer>-->
+    <footer>
 
-    <!--</footer>-->
+    </footer>
     <script>
       $(document).ready(function() {
   $('img').addClass('ui image');

@@ -7,8 +7,6 @@
 
      
 
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
@@ -117,7 +115,7 @@ body
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-       jQuery Part Two 
+       jQuery Part Two
     </a>
   </header>
   <div class="right tab-menu menu">
@@ -142,7 +140,6 @@ body
 
 <div class="ui segment pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    <br><br>
     
       
         <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
@@ -325,7 +322,7 @@ body
       
     
       
-        <a class="active item" href="../../topic-06-jQuery-2/book-01-Images/index.html">
+        <a class="item" href="../../topic-06-jQuery-2/book-01-Images/index.html">
           Images
         </a>
       
@@ -363,27 +360,27 @@ body
         <h1>Image Rollover</h1>
 <p>We will now look at a method of performing image rollovers. This <a href="archives/examples/rollover.htm" target = "_ blank">example</a> uses the opacity property in CSS to control the display (1 = fully visible; 0 = fully invisible). </p>
 <pre><code class="lang-js">$(document).ready(function() {
+$(&#39;#gallery img&#39;).css(&#39;opacity&#39;, 0.6);
 
- $(&#39;#gallery img&#39;).css(&#39;opacity&#39;, 0.6);
-       $(&#39;#gallery img&#39;).on(&#39;mouseover&#39;, function() {
-             $(this).css(&#39;opacity&#39;, 1);
-       });
+$(&#39;#gallery img&#39;).on(&#39;mouseover&#39;, function() {
+     $(this).css(&#39;opacity&#39;, 1);
+});
 
-       $(&#39;#gallery img&#39;).on(&#39;mouseout&#39;, function() {
-             $(this).css(&#39;opacity&#39;, 0.6);
-       });
+$(&#39;#gallery img&#39;).on(&#39;mouseout&#39;, function() {
+     $(this).css(&#39;opacity&#39;, 0.6);
+});
 });</code></pre>
 <p>In this <a href="archives/examples/rollover2.htm" target = "_ blank">example</a>, we also use the .fadeTo() method tofade in and out the opacity of the images.</p>
 <pre><code class="lang-js">$(document).ready(function() {
+$(&#39;#gallery img&#39;).css(&#39;opacity&#39;, 0.6);
 
- $(&#39;#gallery img&#39;).css(&#39;opacity&#39;, 0.6);
-      $(&#39;#gallery img&#39;).on(&#39;mouseover&#39;, function() {
-            $(this).stop().fadeTo(1200, 1);
-      });
+$(&#39;#gallery img&#39;).on(&#39;mouseover&#39;, function() {
+    $(this).stop().fadeTo(1200, 1);
+});
 
-      $(&#39;#gallery img&#39;).on(&#39;mouseout&#39;, function() {
-            $(this).stop().fadeTo(1200, 0.6);
-      });
+$(&#39;#gallery img&#39;).on(&#39;mouseout&#39;, function() {
+    $(this).stop().fadeTo(1200, 0.6);
+);
 });</code></pre>
 <p>When the page loads, the opacity of all images in the gallery element is set to 0.6. When the mouse moves over the image, the image is faded to 1 (fully visible); and when the mouse moves away, the image is faded to 0.6 opacity again.</p>
 
@@ -421,14 +418,14 @@ $(this).remove();
 </ul>
 <p>The complete piece of code is as follows:</p>
 <pre><code class="lang-js">$(&#39;#gallery a&#39;).click(function(evt) {
-      evt.preventDefault();
-    var imgPath = $(this).attr(&#39;href&#39;);
-    var oldImage = $(&#39;#photo img&#39;);
-    var newImage = $(&#39;&lt;img src=&quot;&#39; + imgPath +&#39;&quot; alt = &quot;&quot; &gt;&#39;);
-    $(&#39;#photo&#39;).prepend(newImage);
-    oldImage.fadeOut(4500,function(){
-        $(this).remove();
-    });
+        evt.preventDefault();
+        var imgPath = $(this).attr(&#39;href&#39;);
+        var oldImage = $(&#39;#photo img&#39;);
+        var newImage = $(&#39;&lt;img src=&quot;&#39; + imgPath +&#39;&quot; alt = &quot;&quot; &gt;&#39;);
+        $(&#39;#photo&#39;).prepend(newImage);
+        oldImage.fadeOut(4500,function(){
+           $(this).remove();
+        });
 });
 $(&#39;#gallery a:first&#39;).click();</code></pre>
 
@@ -474,9 +471,9 @@ $(&#39;#gallery a:first&#39;).click();</code></pre>
 
 
 
-    <!--<footer>-->
+    <footer>
 
-    <!--</footer>-->
+    </footer>
     <script>
       $(document).ready(function() {
   $('img').addClass('ui image');
