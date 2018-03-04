@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html  lang="en" >
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flatlander Crafted Gems</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+       <link href="css/gemstore.css" rel="stylesheet">
+  </head>
+  <body>
+ <script id="some-template" type="text/x-handlebars-template">
+
+  <div class="container">
+    <header>
+      <h1 class="text-center">{{dept}}</h1>
+    </header>
+
+<table class="table table-hover table-striped" >
+<thead>
+<tr>
+<th>Emp ID</th>
+<th>Employee Name</th>
+<th>Address</th>
+<th>Email Address</th>
+</tr>
+</thead>
+<tbody>
+{{#each employee}}
+<tr>
+<td>{{id}}</td>
+<td>{{firstname}} {{lastname}} </td>
+<td>{{county}}</td>
+<td>{{email}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+
+
+
+    </div>
+    </script>
+    <div id = "content-placeholder"></div>
+<h1>Add Employee</h1>
+</div>
+<div class= modal-body>
+<form name = 'emplist' >
+<label>Employee ID</label>
+<input type = text name="id" id ="id">
+<br>
+<label>First Name</label>
+<input type = text name="firstname" id="firstname">
+<br>
+<label>Last Name</label>
+<input type = text name="lastname" id="lastname">
+<br>
+<label>County</label>
+<input type = text name="county" id="county">
+<br>
+<label>Email Address</label>
+<input type = email name="email" id="email">
+<br>
+<input type="button" id="thesubmit" value="submit">
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src='js/handlebars.min.js'></script>
+<script type="text/javascript" src="js/emp2.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html  lang="en" >
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flatlander Crafted Gems</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+       <link href="css/gemstore.css" rel="stylesheet">
+  </head>
+  <body>
+ <script id="some-template" type="text/x-handlebars-template">
+
+  <div class="container">
+    <header>
+      <h1 class="text-center">{{dept}}</h1>
+    </header>
+<table class="table table-hover table-striped" >
+<thead>
+<tr>
+<th>Emp ID</th>
+<th>Employee Name</th>
+<th>Address</th>
+<th>Email Address</th>
+</tr>
+</thead>
+<tbody>
+{{#each employee}}
+<tr>
+<td>{{id}}</td>
+<td>{{firstname}} {{lastname}} </td>
+<td>{{county}}</td>
+<td>{{email}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+
+
+    </div>
+    </script>
+    <div id = "content-placeholder"></div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src='js/handlebars.min.js'></script>
+<script type="text/javascript" src="js/emp.js"></script>
+
+  </body>
+</html>

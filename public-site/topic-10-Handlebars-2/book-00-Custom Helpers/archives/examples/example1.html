@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Example Two</title>
+</head>
+
+<body>
+<script id="handlebars-demo" type="text/x-handlebars-template">
+<div>
+  <h1>By {{fullName author}}</h1>
+  <div class="body">{{body}}</div>
+
+  <h1>Comments</h1>
+
+  {{#each comments}}
+  <h2>By {{fullName author}}</h2>
+  <div class="body">{{body}}</div>
+  {{/each}}
+</div>
+</script>
+
+
+
+<script src='js/jquery-3.1.1.min.js'></script>
+<script src='js/handlebars.min.js'></script>
+<script>
+$(document).ready(function() {
+// Retrieve the template data from the HTML (jQuery is used here).
+var template = $('#handlebars-demo').html();
+
+// Compile the template data into a function
+var templateScript = Handlebars.compile(template);
+
+var context = {
+  author: {firstName: "Alan", lastName: "Johnson"},
+  body: "I Love Handlebars",
+  comments: [{
+    author: {firstName: "Yehuda", lastName: "Katz"},
+    body: "Me too!"
+  }]
+};
+
+Handlebars.registerHelper('fullName', function(person) {
+  return person.firstName + " " + person.lastName;
+});
+
+var html = templateScript(context);
+
+// Insert the HTML code into the page
+$(document.body).append(html);});
+</script>
+</body>

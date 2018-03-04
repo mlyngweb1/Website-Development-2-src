@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Example Two</title>
+</head>
+
+<body>
+<script id="some-template" type="text/x-handlebars-template">
+  <table border="1">
+    <thead>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Secret Identity</th>
+      <th>Powers</th>
+    </thead>
+    <tbody>
+      {{#each members}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{age}} </td>
+          <td>{{secretIdentity}}</td>
+          <td>{{#each powers}}<ul>
+          <li>{{this}}</li>
+          </ul>{{/each}}
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </script>
+ <div id="content-placeholder"></div>
+
+<script src='js/jquery-3.1.1.min.js'></script>
+<script src='js/handlebars.min.js'></script>
+<script src="js/example.js">
+</script>
+</body>

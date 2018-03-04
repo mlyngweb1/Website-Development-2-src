@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html  lang="en" >
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flatlander Crafted Gems</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+       <link href="css/gemstore.css" rel="stylesheet">
+  </head>
+  <body>
+ <script id="some-template" type="text/x-handlebars-template">
+
+  <div class="container">
+    <header>
+      <h1 class="text-center">{{shop}}</h1>
+    </header>
+    <div class="list-group-item" >
+    <div id="accordion">
+    {{#each gems}}
+    <div>
+      <h3>
+        {{name}}
+        <em class="pull-right">{{price}} </em>
+      </h3>
+      <section>
+
+          <h4>Description</h4>
+          <blockquote> {{description}}</blockquote>
+
+
+          <h4>Specs</h4>
+          <blockquote>
+          <ul class="list-unstyled">
+			<li><strong>Shine</strong>: {{shine}}</li>
+			<li><strong>Faces</strong>:{{faces}} </li>
+			<li><strong>Rarity</strong>: {{rarity}}</li>
+			<li><strong>Color</strong>:{{color}} </li>
+         </ul>
+         </blockquote>
+
+
+
+          <h4>Reviews</h4>
+          <ul>
+
+		  	<li class="list-unstyled" >
+
+		  		{{#each reviews}}
+		  		<blockquote>
+		  			<strong>{{stars}} Stars</strong>
+		  			{{body}}
+		  			<br><cite>-{{author}}</cite>
+		  		</blockquote>
+		  		{{/each}}
+		  	</li>
+           </ul>
+
+         </div>
+
+
+      </section>
+     {{/each}}
+     </div>
+    </div>
+    </div>
+    </script>
+    <div id = "content-placeholder"></div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src='js/handlebars.min.js'></script>
+<script type="text/javascript" src="js/app1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+     $( "#accordion" ).accordion()
+  } );
+  </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>each Helper</title>
+</head>
+
+<body>
+<script id="handlebars-demo" type="text/x-handlebars-template">
+  <div>
+        <p>{{name}} on {{date}}<br>
+        {{{comment}}}</p>
+        {{#unless social}}
+        <h3>No Social media</h3>
+        {{else}}
+        <h3>Social media</h3>
+        <ul>
+        {{#each social}}
+         <li>{{site}} - username:{{name}}</li>
+        {{/each}}
+       {{/unless}}
+  </div>
+</script>
+
+
+
+<script src='js/jquery-3.1.1.min.js'></script>
+<script src='js/handlebars.min.js'></script>
+<script>
+$(document).ready(function() {
+// Retrieve the template data from the HTML (jQuery is used here).
+var template = $('#handlebars-demo').html();
+
+// Compile the template data into a function
+var templateScript = Handlebars.compile(template);
+
+var data = {
+  name: "Jack",
+  date: "12/03/18",
+  comment: "This is a really <strong>awesome</strong> tutorial. Thanks.",
+  social: [
+    {
+      site: "Twitter",
+      name: "Jack_Franklin"
+    },
+    {
+      site: "Github",
+      name: "jackfranklin"
+    }
+  ]
+};
+
+
+var html = templateScript(data);
+
+// Insert the HTML code into the page
+$(document.body).append(html);});
+</script>
+</body>

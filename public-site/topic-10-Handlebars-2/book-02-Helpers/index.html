@@ -1,0 +1,639 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Handlebars
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Helpers">
+      Helpers
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercise">
+      Exercise
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
+          Layout Recap
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-01-Add some Behaviour/index.html">
+          Add some Behaviour
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-02-Exercise/index.html">
+          Recap Exercise
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-00-JavaScript-Introduction/index.html">
+          JavaScript Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-01-Variables/index.html">
+          Variables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-02-Operators/index.html">
+          JavaScript Operators
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-03-Selection/index.html">
+          Selection
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-04-Loops/index.html">
+          Loops
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-05-Pop Up Boxes/index.html">
+          Pop Up Boxes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-06-Global Methods/index.html">
+          Global Methods
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-07-Exercise/index.html">
+          JavaScript Exercises
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-00-String-Manipulation/index.html">
+          String Manipulation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-01-Math-Object/index.html">
+          Math Object
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-02-Date-Object/index.html">
+          Date Object
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-03-Functions/index.html">
+          Functions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-04-Validation/index.html">
+          Input Validation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-05-Arrays/index.html">
+          Arrays
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-00-DOM/index.html">
+          Document Object Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-01-Accessing Elements/index.html">
+          Accessing Elements
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-02-Working with Form Elements/index.html">
+          Working with Form Elements
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-03-Events/index.html">
+          Events
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-04-Example/index.html">
+          Example
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-05-Exercise/index.html">
+          Exercise
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-00-jQuery Selectors/index.html">
+          jQuery Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-01-jQuery Filters/index.html">
+          jQuery Filters
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-02-Adding content to a page/index.html">
+          Adding content
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-03-Modifying CSS properties/index.html">
+          Modifying CSS properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-04-Tag attributes/index.html">
+          Tag attributes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-05-Exercises/index.html">
+          Exercises
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-00-Events/index.html">
+          Events
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-01-Images/index.html">
+          Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-02-Plugins/index.html">
+          jQuery Plugins
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-03-Example/index.html">
+          Example
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-04-Exercises/index.html">
+          Exercises
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Handlebars-1/book-00-Intro/index.html">
+          Intro to Handlebars
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Handlebars-1/book-01-Templates/index.html">
+          Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-Handlebars-1/book-02-Helpers/index.html">
+          Helpers
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-10-Handlebars-2/book-00-Custom Helpers/index.html">
+          Custom Helpers
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-10-Handlebars-2/book-01-Templates/index.html">
+          Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-10-Handlebars-2/book-02-Helpers/index.html">
+          Helpers
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Helpers">
+        <h1>Objectives</h1>
+<p>This lab will introduce you to helpers in Handlebars.</p>
+<ul>
+<li><p><a href="#/01">Blocks</a></p>
+</li>
+<li><p><a href="#/02">Helpers</a></p>
+</li>
+<li><p><a href="#/03">each Helper</a></p>
+</li>
+<li><p><a href="#/04">if Helper</a></p>
+</li>
+<li><p><a href="#/05">unless and with Helpers</a></p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Blocks</h1>
+<p>In Handlebars, blocks are expressions that have a block opening <code>({{# }})</code> and closing <code>({{/}})</code>.<br>For now, take a look at how an if block is written:</p>
+<pre><code>{{#if boolean}}
+   Some Content here
+{{/if}}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Helpers</h1>
+<p>Even though Handlebars is a logic-less templating engine, it can execute simple logics using helpers. A Handlebars <em>helper</em> is a simple identifier that may be 
+followed by parameters (separated by a space), as shown below:</p>
+<pre><code>{{#helperName parameter1 parameter2 ...}}
+  Content here
+{{/helperName}}</code></pre>
+<p>Each parameter is a Handlebars expression. These helpers can be accessed from any context in a template.</p>
+<p>The terms <code>block</code>, <code>helper</code>, and <code>block helper</code> are sometimes used interchangeably as most of the built-in helpers are blocks. </p>
+<p>Some built-in helpers are <strong>if</strong>, <strong>each</strong>, <strong>unless</strong>, and <strong>with</strong>. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>each Helper</h1>
+<p>The <strong>each</strong> helper is used to iterate over an array. The syntax of the helper is </p>
+<pre><code>{{#each ArrayName}} 
+YourContent 
+{{/each}}</code></pre>
+<p>We can refer to the individual array items by using the keyword <strong>this</strong> inside the block.</p>
+<p>If we employ the following template:</p>
+<pre><code>{{#each names}}
+  Name : {{firstName}} {{lastName}}&lt;br&gt;
+{{/each}}</code></pre>
+<p>in conjunction with this context variable:</p>
+<pre><code>var context = {
+  &quot;country&quot;:&quot;USA&quot;,
+  &quot;names&quot; : [
+    {&quot;firstName&quot;:&quot;Ritesh&quot;,&quot;lastName&quot;:&quot;Kumar&quot;},
+    {&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}
+  ]
+}</code></pre>
+<p>then the output can be seen in the following <a href ="archives/examples/example1.html" target="_blank">example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>if Helper</h1>
+<p>The <strong>if</strong> helper is similar to an if statement. If the condition evaluates to a truthy value, Handlebars will render the block. 
+We can also specify a template section known as <code>else section</code>, by using {{else}}. </p>
+<p>To show how the <code>if</code> helper works, let us consider the template below:</p>
+<pre><code>{{#if countries}}
+  The countries are present.
+{{else}}
+  The countries are not present.
+{{/if}}</code></pre>
+<p>If we provide the following context variable:</p>
+<pre><code>var context = {
+  &quot;countries&quot;: []
+}</code></pre>
+<p>We will obtain the result as in the following <a href ="archives/examples/example2.html" target="_blank">example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>unless and with Helpers</h1>
+<h2>unless Helper</h2>
+<p>The <strong>unless</strong> helper is the inverse of the <code>if</code> helper. It renders the block when the condition evaluates to a falsy value as can
+be seen in the following <a href ="archives/examples/example3.html" target="_blank">example</a>.</p>
+<h2>with Helper</h2>
+<p>In case there is an object with nested properties, and there are a lot of them, it is possible to use <strong>with</strong> to pass the context.</p>
+<p>To show how the <code>with</code> helper works, let us consider the template below:</p>
+<pre><code>&lt;div&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+
+  {{#with author}}
+  &lt;h2&gt;By {{firstName}} {{lastName}}&lt;/h2&gt;
+  {{/with}}
+&lt;/div&gt;</code></pre>
+<p>If we provide the following context variable:</p>
+<pre><code>var context = {
+  title: &quot;My first post!&quot;,
+  author: {
+    firstName: &quot;Charles&quot;,
+    lastName: &quot;Jolley&quot;
+  }
+}</code></pre>
+<p>We will obtain the result as in the following <a href ="archives/examples/example4.html" target="_blank">example</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise">
+        <h1>Helpers Exercises</h1>
+<h2>Exercise One</h2>
+<ul>
+<li>Open the folder called <code>Week08</code>.</li>
+<li>Download, extract and open the <a href="archives/lab02.zip">Lab02</a> folder.</li>
+<li>Open file (exercise1.html).</li>
+</ul>
+<p>Given the following data (context):</p>
+<pre><code>var recipe = {
+  description: &#39;Yummy Chicken Noodle Soup&#39;,
+  ingredients: [
+    {quantity: &quot;1 cup&quot;, name: &#39;Chicken&#39;},
+    {quantity: &quot;3 nanoliters&quot;, name: &#39;Stock&#39;},
+    {quantity: &quot;12&quot;, name: &#39;Noodles&#39;}
+  ]
+}</code></pre>
+<p>Create and compile a template that will result in the following:</p>
+<p><img src="img/exercise.png" alt=""></p>
+<h2>Exercise Two</h2>
+<ul>
+<li>Open file (exercise2.html).</li>
+</ul>
+<p>Given the following data (context):</p>
+<pre><code>var data = {
+  name: &quot;Jack&quot;,
+  date: &quot;12/04/12&quot;,
+  comment: &quot;This is a really &lt;strong&gt;awesome&lt;/strong&gt; tutorial. Thanks.&quot;,
+  social: []
+    {
+      site: &quot;Twitter&quot;,
+      name: &quot;Jack_Franklin&quot;
+    },
+    {
+      site: &quot;Github&quot;,
+      name: &quot;jackfranklin&quot;
+    }
+  ]
+}</code></pre>
+<p>Create and compile a template that will result in the following:</p>
+<p><img src="img/exercise2.png" alt=""></p>
+<p>and the following if there are no social sites (i.e. social is an empty array):</p>
+<p><img src="img/exercise3.png" alt=""></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
