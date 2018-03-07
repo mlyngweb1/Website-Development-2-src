@@ -7,8 +7,6 @@
 
      
 
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
@@ -117,7 +115,7 @@ body
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-       jQuery Part Two 
+       jQuery Part Two
     </a>
   </header>
   <div class="right tab-menu menu">
@@ -138,7 +136,6 @@ body
 
 <div class="ui segment pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
-    <br><br>
     
       
         <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
@@ -267,7 +264,7 @@ body
       
     
       
-        <a class="active item" href="../../topic-04-JavaScript-3/book-04-Example/index.html">
+        <a class="item" href="../../topic-04-JavaScript-3/book-04-Example/index.html">
           Example
         </a>
       
@@ -333,7 +330,7 @@ body
       
     
       
-        <a class="active item" href="../../topic-06-jQuery-2/book-03-Example/index.html">
+        <a class="item" href="../../topic-06-jQuery-2/book-03-Example/index.html">
           Example
         </a>
       
@@ -341,24 +338,6 @@ body
       
         <a class="item" href="../../topic-06-jQuery-2/book-04-Exercises/index.html">
           Exercises
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-07-jQuery-3/book-00-Effects/index.html">
-          Effects
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-07-jQuery-3/book-01-Working with Forms/index.html">
-          Working with Forms
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-07-jQuery-3/book-02-jQuery UI/index.html">
-          jQueryUI
         </a>
       
     
@@ -376,7 +355,7 @@ body
      
       <div  class="ui tab segment lab" data-tab="01">
         <h1>Lotto</h1>
-<p>As you can see the <a href="archives/lotto/lotto.html" target="_blank">game</a> executes like before. </p>
+<p>As you can see the <a href="archives/Lotto/lotto.html" target="_blank">game</a> executes like before. </p>
 <p>The main changes are with how elements are selected and how error messages are displayed etc.. So for example, instead of using <strong>document.getElementById(&#39;error&#39;)</strong>, we are using <strong>$(&#39;#error&#39;)</strong>.
 Likewise, to add a message to the element with an ID of <em>error</em>, we use <strong>$(&#39;#error&#39;).text(msg);</strong> instead of <strong>document.getElementById(&#39;error&#39;).textContent=msg;</strong></p>
 <h2>Clear Numbers</h2>
@@ -394,14 +373,16 @@ Likewise, to add a message to the element with an ID of <em>error</em>, we use <
 }</code></pre>
 <p>The clearNumbers() function uses  <strong>.each()</strong> anonymous functions to clear each form and on one of the forms, enable the text boxes also.</p>
 <h2>Handling the Events</h2>
-<pre><code>$(&#39;#numbers input[type=&quot;text&quot;]&#39;).on(&#39;blur&#39;, function () {
-    validNum($(this));
+<pre><code>$(&#39;#numbers input[type=&quot;text&quot;]&#39;).on({
+    blur: function () {
+      validNum($(this));
+    },
+   focus: function () {
+    $(&#39;#error2&#39;).text(&quot;&quot;);
+   }
 });</code></pre>
-<p>This code calls the <strong>validNum()</strong> function when any text box in the <em>numbers</em> form has a <em>blur</em> event.</p>
-<pre><code>$(&#39;#numbers input[type=&quot;text&quot;]&#39;).on(&#39;focus&#39;, function () {
-    $(&#39;#p1&#39;).text(&quot;&quot;);
-});</code></pre>
-<p>This code clears the paragraph with the ID of <em>error2</em>  when any text box in the <em>numbers</em> form has a <em>focus</em> event.</p>
+<p>This code calls the <strong>validNum()</strong> function when any text box in the <em>numbers</em> form has a <em>blur</em> event. And, the code clears the paragraph with the ID 
+of <em>error2</em>  when any text box in the <em>numbers</em> form has a <em>focus</em> event.</p>
 <pre><code>$(&quot;#play&quot;).on(&#39;click&#39;, function() {
     newNumbers();
 });</code></pre>
@@ -453,9 +434,9 @@ Likewise, to add a message to the element with an ID of <em>error</em>, we use <
 
 
 
-    <!--<footer>-->
+    <footer>
 
-    <!--</footer>-->
+    </footer>
     <script>
       $(document).ready(function() {
   $('img').addClass('ui image');
