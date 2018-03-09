@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>each Helper</title>
+</head>
+
+<body>
+<script id="handlebars-demo" type="text/x-handlebars-template">
+
+
+  {{#each .}}
+ <h1> {{title}}</h1>
+  <table>
+  <tr><th>Title</th><th>Artist</th></tr>
+  {{#each songs}}
+  <tr><td>{{title}}</td>
+  <td>{{artist}}</td></tr>
+  {{/each}}
+  </table>
+{{/each}}
+</script>
+
+
+
+<script src='js/jquery-3.1.1.min.js'></script>
+<script src='js/handlebars.min.js'></script>
+<script>
+$(document).ready(function() {
+// Retrieve the template data from the HTML (jQuery is used here).
+var template = $('#handlebars-demo').html();
+
+// Compile the template data into a function
+var templateScript = Handlebars.compile(template);
+
+var playlistCollection = [
+{      "title": "Beethoven Sonatas",
+       "songs": [
+       {  "title": "Piano Sonata No. 3",
+          "artist": "Beethoven"        },
+       {  "title": "Piano Sonata No. 7",
+          "artist": "Beethoven"        },
+       {  "title": "Piano Sonata No. 10",
+          "artist": "Beethoven"        }
+       ]
+     },
+     {
+          "title": "Beethoven Concertos",
+          "songs": [
+       {
+          "title": "Piano Concerto No. 0",
+          "artist": "Beethoven"        },
+       {  "title": "Piano Concerto No. 4",
+          "artist": "Beethoven"        },
+       {  "title": "Piano Concerto No. 6",
+          "artist": "Beethoven"        }
+       ]
+     }
+]
+
+
+// html = 'My name is Ritesh Kumar. I am a developer.'
+var html = templateScript(playlistCollection);
+
+// Insert the HTML code into the page
+$(document.body).append(html);});
+</script>
+</body>
