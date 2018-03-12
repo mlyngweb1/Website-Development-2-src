@@ -7,6 +7,8 @@
 
      
 
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
@@ -115,7 +117,7 @@ body
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-       jQuery Part Three
+       jQuery Part Three 
     </a>
   </header>
   <div class="right tab-menu menu">
@@ -148,6 +150,7 @@ body
 
 <div class="ui segment pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
     
       
         <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
@@ -354,7 +357,7 @@ body
       
     
       
-        <a class="item" href="../../topic-07-jQuery-3/book-00-Effects/index.html">
+        <a class="active item" href="../../topic-07-jQuery-3/book-00-Effects/index.html">
           Effects
         </a>
       
@@ -443,8 +446,7 @@ body
 
   $(&#39;h2&#39;).hide().slideDown();
 
-  var $li = $(&#39;li&#39;);
-  $li.hide().each(function(index) {
+  $(&#39;li&#39;).hide().each(function(index) {
     $(this).delay(700 * index).fadeIn(700);
   });
 
@@ -455,12 +457,11 @@ body
 
   $(&#39;h2&#39;).hide().slideDown();
 
-  var $li = $(&#39;li&#39;);
-  $li.hide().each(function(index) {
+  $(&#39;li&#39;).hide().each(function(index) {
     $(this).delay(700 * index).fadeIn(700);
   });
 
-  $li.on(&#39;click&#39;, function() {
+  $(&#39;li&#39;).on(&#39;click&#39;, function() {
     $(this).fadeOut(700);
   });
 
@@ -570,9 +571,9 @@ body
 
 
 
-    <footer>
+    <!--<footer>-->
 
-    </footer>
+    <!--</footer>-->
     <script>
       $(document).ready(function() {
   $('img').addClass('ui image');
