@@ -1,0 +1,506 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       jQuery Part Three 
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="jQueryUI">
+      jQueryUI
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
+          Layout Recap
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-01-Add some Behaviour/index.html">
+          Add some Behaviour
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-Module-Introduction/book-02-Exercise/index.html">
+          Recap Exercise
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-00-JavaScript-Introduction/index.html">
+          JavaScript Introduction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-01-Variables/index.html">
+          Variables
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-02-Operators/index.html">
+          JavaScript Operators
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-03-Selection/index.html">
+          Selection
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-04-Loops/index.html">
+          Loops
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-05-Pop Up Boxes/index.html">
+          Pop Up Boxes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-06-Global Methods/index.html">
+          Global Methods
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-JavaScript-1/book-07-Exercise/index.html">
+          JavaScript Exercises
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-00-String-Manipulation/index.html">
+          String Manipulation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-01-Math-Object/index.html">
+          Math Object
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-02-Date-Object/index.html">
+          Date Object
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-03-Functions/index.html">
+          Functions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-04-Validation/index.html">
+          Input Validation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-JavaScript-2/book-05-Arrays/index.html">
+          Arrays
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-00-DOM/index.html">
+          Document Object Model
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-01-Accessing Elements/index.html">
+          Accessing Elements
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-02-Working with Form Elements/index.html">
+          Working with Form Elements
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-03-Events/index.html">
+          Events
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-04-Example/index.html">
+          Example
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-JavaScript-3/book-05-Exercise/index.html">
+          Exercise
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-00-jQuery Selectors/index.html">
+          jQuery Selectors
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-01-jQuery Filters/index.html">
+          jQuery Filters
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-02-Adding content to a page/index.html">
+          Adding content
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-03-Modifying CSS properties/index.html">
+          Modifying CSS properties
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-04-Tag attributes/index.html">
+          Tag attributes
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-jQuery-1/book-05-Exercises/index.html">
+          Exercises
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-00-Events/index.html">
+          Events
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-01-Images/index.html">
+          Images
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-02-Plugins/index.html">
+          jQuery Plugins
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-03-Example/index.html">
+          Example
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-jQuery-2/book-04-Exercises/index.html">
+          Exercises
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-jQuery-3/book-00-Effects/index.html">
+          Effects
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-jQuery-3/book-01-Working with Forms/index.html">
+          Working with Forms
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic-07-jQuery-3/book-02-jQuery UI/index.html">
+          jQueryUI
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="jQueryUI">
+        <h1>Objectives</h1>
+<p>In this section, we will add an element from the jQuery UI website.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>jQuery UI</h1>
+<p>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you&#39;re building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.</p>
+<p>There are many options available; we will use the Accordion widget as an example here. The accordion shows and hides paragraphs of text under headings i.e. showing one paragraph at a time.</p>
+<p><img src="img/exercise3-1.png" alt=""></p>
+<p>You can &#39;view source&#39; on any of the jQuery UI elements to see the code that makes them work. The code for the accordion can be seen here:</p>
+<p><img src="img/exercise3-2.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Steps to add a jQuery UI element to your website</h1>
+<p>We will demonstrate how the accordion element could be added to our grocery cart example.</p>
+<h3>Step One: Add jQueryUI CSS and JS links</h3>
+<p>Links to the jQueryUI CSS and JavaScript files should be added to the head section of the page whenever you want to make use of a jQueryUI element on your page:</p>
+<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css&quot;&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-1.12.4.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p><img src="img/exercise3-3.png" alt=""></p>
+<h3>Step Two: Add jQuery to call the accordion function</h3>
+<p>The jQuery shown here targets the #accordion div and calls the accordion() function. Add this after the three lines you added in the previous step.</p>
+<pre><code class="lang-js">&lt;script&gt;
+$( function() {
+  $( &quot;#accordion&quot; ).accordion();
+} );
+&lt;/script&gt;</code></pre>
+<p><img src="img/exercise3-4.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <!--<footer>-->
+
+    <!--</footer>-->
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
