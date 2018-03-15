@@ -7,6 +7,8 @@
 
      
 
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
@@ -115,7 +117,7 @@ body
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
     <a href="../index.html">
-       jQuery Part Three
+       jQuery Part Three 
     </a>
   </header>
   <div class="right tab-menu menu">
@@ -132,12 +134,8 @@ body
       02
     </a>
     
-    <a class="item" data-tab="03">
-      03
-    </a>
-    
-    <a class="item" data-tab="04">
-      04
+    <a class="item" data-tab="Exercises">
+      Exercises
     </a>
     
     <div class="item">
@@ -148,6 +146,7 @@ body
 
 <div class="ui segment pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
     
       
         <a class="item" href="../../topic-01-Module-Introduction/book-00-Layout Recap/index.html">
@@ -366,7 +365,7 @@ body
       
     
       
-        <a class="item" href="../../topic-07-jQuery-3/book-02-jQuery UI/index.html">
+        <a class="active item" href="../../topic-07-jQuery-3/book-02-jQuery UI/index.html">
           jQueryUI
         </a>
       
@@ -384,7 +383,7 @@ body
      
       <div  class="ui tab segment lab" data-tab="01">
         <h1>jQuery UI</h1>
-<p>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you&#39;re building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.</p>
+<p>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you&#39;re building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice. Visit the website here: <a href="https://jqueryui.com/" target="_ blank"><code>https://jqueryui.com/</code></a></p>
 <p>There are many options available; we will use the Accordion widget as an example here. The accordion shows and hides paragraphs of text under headings i.e. showing one paragraph at a time.</p>
 <p><img src="img/exercise3-1.png" alt=""></p>
 <p>You can &#39;view source&#39; on any of the jQuery UI elements to see the code that makes them work. The code for the accordion can be seen here:</p>
@@ -394,30 +393,45 @@ body
      
       <div  class="ui tab segment lab" data-tab="02">
         <h1>Steps to add a jQuery UI element to your website</h1>
-<p>We will demonstrate how the accordion element could be added to our grocery cart example.</p>
-<h3>Step One: Add jQueryUI CSS and JS links</h3>
-<p>Links to the jQueryUI CSS and JavaScript files should be added to the head section of the page whenever you want to make use of a jQueryUI element on your page:</p>
-<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css&quot;&gt;
-&lt;script src=&quot;https://code.jquery.com/jquery-1.12.4.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>This section will demonstrate how to add the accordion element to a web page.</p>
+<h3>Step One: Add jQueryUI CSS links</h3>
+<p>Links to the jQueryUI CSS should be added to the head section of the page whenever you want to make use of a jQueryUI element on your page:</p>
+<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/resources/demos/style.css&quot;&gt;</code></pre>
 <p><img src="img/exercise3-3.png" alt=""></p>
-<h3>Step Two: Add jQuery to call the accordion function</h3>
+<h3>Step Two: Add jQueryUI JavaScript links</h3>
+<p>You should also include a link to the jQueryUI script at the end of the body section, in addition to the jQuery script.</p>
+<pre><code class="lang-html">&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p><img src="img/exercise3-4.png" alt=""></p>
+<h3>Step Three: add jQuery function</h3>
 <p>The jQuery shown here targets the #accordion div and calls the accordion() function. Add this after the three lines you added in the previous step.</p>
 <pre><code class="lang-js">&lt;script&gt;
 $( function() {
   $( &quot;#accordion&quot; ).accordion();
 } );
 &lt;/script&gt;</code></pre>
-<p><img src="img/exercise3-4.png" alt=""></p>
+<p><img src="img/exercise3-5.png" alt=""></p>
+<h3>Step Four: use appropriate HTML</h3>
+<p>To use the accordion element, add id=accordion to the div containing the <code>&lt;h3&gt;</code> headings and paragraphs. The accordion element works with <code>&lt;h3&gt;</code> headings and paragraphs - other jQueryUI elements may require different HTML to be used. You can read more about each element on the jQueryUI.com website: <a href="https://jqueryui.com/" target="_ blank"><code>https://jqueryui.com/</code></a></p>
+<p><img src="img/exercise3-6.png" alt=""></p>
 
       </div>
      
-      <div  class="ui tab segment lab" data-tab="03">
-        
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="04">
-        
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercise 3</h1>
+<ul>
+<li>Download, extract and open the <a href="archives/lab03.zip">Lab03</a> folder.</li>
+<li><p>In the index.html file, carry out the following steps:</p>
+<ol>
+<li><p>Implement the accordion feature as described in the previous step.</p>
+</li>
+<li><p>Visit <a href="https://jqueryui.com/" target="_ blank"><code>https://jqueryui.com/</code></a> and choose another jQueryUI element; include this element in index.html.</p>
+</li>
+</ol>
+</li>
+</ul>
+
       </div>
      
     </div>
@@ -460,9 +474,9 @@ $( function() {
 
 
 
-    <footer>
+    <!--<footer>-->
 
-    </footer>
+    <!--</footer>-->
     <script>
       $(document).ready(function() {
   $('img').addClass('ui image');
