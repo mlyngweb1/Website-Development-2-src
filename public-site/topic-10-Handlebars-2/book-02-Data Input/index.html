@@ -128,6 +128,10 @@ body
       01
     </a>
     
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
     <div class="item">
       
     </div>
@@ -404,42 +408,46 @@ body
         <h1>Objectives</h1>
 <p>This lab will look at an example of adding data to a JSON object.</p>
 <ul>
-<li><a href="#/01">Employee Form</a></li>
+<li><p><a href="#/01">Employee Form</a></p>
+</li>
+<li><p><a href="#/02">JavaScript required</a></p>
+</li>
 </ul>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="01">
         <h1>Employee Form</h1>
-<p>In this example we will add a button that will call a form inside a modal dialog when we want to add another employee object.</p>
+<p>In this <a href="archives/examples/employee.html" target="_blank">example</a> which display employee records from a JSON object. The web page also includes 
+a button that will open a form inside a modal dialog if we want to add a new employee.</p>
 <pre><code>&lt;button class=&quot;float-right btn btn-primary&quot; id=&quot;btncall&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalForm&quot;&gt;Add Employee&lt;/button&gt;</code></pre>
-<p>The form that contains the required text boxes is as follows:</p>
+<p>The following form contains text boxes (validated), which allow the user to enter Employee data:</p>
 <pre><code>&lt;form name = &#39;emplist&#39; id = &quot;emplist&quot; &gt;
 &lt;div class=&quot;form-group row&quot;&gt;
 &lt;label for = &quot;id&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;Employee ID&lt;/label&gt;
 &lt;div class=&quot;col-sm-9&quot;&gt;
-&lt;input type = &quot;text&quot; name=&quot;id&quot; id =&quot;id&quot; autofocus class=&quot;form-control&quot; required pattern = &quot;\d&quot;
-                title=&quot;Please enter numeric values only&quot;&gt;
+&lt;input type = &quot;text&quot; name=&quot;id&quot; id =&quot;id&quot; autofocus class=&quot;form-control&quot; required pattern = &quot;\d&quot; title=&quot;Please enter numeric values only&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-group row&quot;&gt;
 &lt;label for = &quot;firstname&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;First Name&lt;/label&gt;
 &lt;div class=&quot;col-sm-9&quot;&gt;
-&lt;input type = &quot;text&quot; name=&quot;firstname&quot; id=&quot;firstname&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+( [A-Z][a-z]+)?&quot;
-                title=&quot;Please enter your first name (Second name optional) with First Letter capitalised&quot;&gt;
+&lt;input type = &quot;text&quot; name=&quot;firstname&quot; id=&quot;firstname&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+( [A-Z][a-z]+)?&quot; 
+                     title=&quot;Please enter your first name (Second name optional) with First Letter capitalised&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-group row&quot;&gt;
 &lt;label for = &quot;lastname&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;Last Name&lt;/label&gt;
 &lt;div class=&quot;col-sm-9&quot;&gt;
-&lt;input type = &quot;text&quot; name=&quot;lastname&quot; id=&quot;lastname&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+( [A-Z][a-z]+)?&quot;
-                title=&quot;Please enter a Surname (Second name optional) with First Letter capitalised&quot;&gt;
+&lt;input type = &quot;text&quot; name=&quot;lastname&quot; id=&quot;lastname&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+( [A-Z][a-z]+)?&quot; 
+                     title=&quot;Please enter a Surname (Second name optional) with First Letter capitalised&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-group row&quot;&gt;
 &lt;label for = &quot;county&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;County&lt;/label&gt;
 &lt;div class=&quot;col-sm-9&quot;&gt;
-&lt;input type = &quot;text&quot; name=&quot;county&quot; id=&quot;county&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+&quot; title =&quot;Please enter a valid county with First Letter capitalised&quot;&gt;
+&lt;input type = &quot;text&quot; name=&quot;county&quot; id=&quot;county&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+&quot; 
+                     title =&quot;Please enter a valid county with First Letter capitalised&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-group row&quot;&gt;
@@ -456,7 +464,7 @@ body
 &lt;/div&gt;
 &lt;/form&gt;
 ~</code></pre>
-<p>This form is enclosed in code that produces the form iside a modal dialog:</p>
+<p>This form is enclosed in code that opens the form inside a modal dialog (this is a Bootstrap feature):</p>
 <pre><code>&lt;div class=&quot;modal fade&quot; id =&quot;modalForm&quot;   role=&quot;dialog&quot;&gt;
 &lt;div class=&quot;modal-dialog&quot;&gt;
 &lt;div class=&quot;modal-content&quot;&gt;
@@ -471,6 +479,68 @@ body
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>JavaScript required</h1>
+<p>The code to display the JSON data is as follows:</p>
+<pre><code>var source   = $(&quot;#some-template&quot;).html();
+var template = Handlebars.compile(source);
+
+var employee = [
+        {
+            &#39;id&#39;:1,
+            &#39;firstname&#39;: &quot;Fred&quot;,
+            &#39;lastname&#39;: &quot;Bloggs&quot;,
+            &#39;county&#39;:&#39;Kilkenny&#39;,
+            &#39;email&#39;:&#39;fbloggs@gmail.com&#39;
+        },
+        {
+            &#39;id&#39;:2,
+            &#39;firstname&#39;: &quot;Katy&quot;,
+            &#39;lastname&#39;: &quot;Malone&quot;,
+            &#39;county&#39;:&#39;Waterford&#39;,
+            &#39;email&#39;:&#39;kmalone@gmail.com&#39;
+        },
+        {
+            &#39;id&#39;:3,
+            &#39;firstname&#39;: &quot;Sam&quot;,
+            &#39;lastname&#39;: &quot;Dunne&quot;,
+            &#39;county&#39;:&#39;Waterford&#39;,
+            &#39;email&#39;:&#39;samdunne@gmail.com&#39;
+        }
+];
+
+var theCompiledHtml = template(employee);
+
+$(&quot;#content-placeholder&quot;).html(theCompiledHtml);</code></pre>
+<h2>Add an Employee</h2>
+<p>When the user enters employee data (id, firstname, lastname, county, and email) and then clicks the submit (Add Employee) button the text box data is put together into a new object, and this new object is pushed onto the employee array. The page is then refreshed
+including the new employee object. The modal dialog is hidden and the text boxes are cleared.</p>
+<pre><code>$(&#39;#emplist&#39;).submit(function() {
+
+ newemp= {
+     id:$(&#39;#id&#39;).val(),
+     firstname:$(&#39;#firstname&#39;).val(),
+     lastname:$(&#39;#lastname&#39;).val(),
+     county:$(&#39;#county&#39;).val(),
+     email:$(&#39;#email&#39;).val()
+ }
+ employee.push(newemp);
+
+ var theCompiledHtml = template(employee);
+ $(&quot;#content-placeholder&quot;).html(theCompiledHtml);
+
+ $(&#39;#modalForm&#39;).modal(&#39;hide&#39;);
+
+ $(&#39;input[type=&quot;text&quot;]&#39;).each(function() {
+        $(this).val(&quot;&quot;);
+ });
+ $(&#39;input[type=&quot;email&quot;]&#39;).val(&quot;&quot;);
+
+ return false;
+});</code></pre>
 
       </div>
      
