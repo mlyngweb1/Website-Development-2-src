@@ -124,6 +124,10 @@ body
       Data Input
     </a>
     
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
     <div class="item">
       
     </div>
@@ -398,13 +402,75 @@ body
       
       <div  class="ui tab segment lab" data-tab="Data Input">
         <h1>Objectives</h1>
-<p>This lab will introduce you to adding data to a JSON object.</p>
+<p>This lab will look at an example of adding data to a JSON object.</p>
 <ul>
-<li><p><a href="#/01">Templates</a></p>
-</li>
-<li><p><a href="#/02">Syntaxes</a></p>
-</li>
+<li><a href="#/01">Employee Form</a></li>
 </ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Employee Form</h1>
+<p>In this example we will add a button that will call a form inside a modal dialog when we want to add another employee object.</p>
+<pre><code>&lt;button class=&quot;float-right btn btn-primary&quot; id=&quot;btncall&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalForm&quot;&gt;Add Employee&lt;/button&gt;</code></pre>
+<p>The form that contains the required text boxes is as follows:</p>
+<pre><code>&lt;form name = &#39;emplist&#39; id = &quot;emplist&quot; &gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+&lt;label for = &quot;id&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;Employee ID&lt;/label&gt;
+&lt;div class=&quot;col-sm-9&quot;&gt;
+&lt;input type = &quot;text&quot; name=&quot;id&quot; id =&quot;id&quot; autofocus class=&quot;form-control&quot; required pattern = &quot;\d&quot;
+                title=&quot;Please enter numeric values only&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+&lt;label for = &quot;firstname&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;First Name&lt;/label&gt;
+&lt;div class=&quot;col-sm-9&quot;&gt;
+&lt;input type = &quot;text&quot; name=&quot;firstname&quot; id=&quot;firstname&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+( [A-Z][a-z]+)?&quot;
+                title=&quot;Please enter your first name (Second name optional) with First Letter capitalised&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+&lt;label for = &quot;lastname&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;Last Name&lt;/label&gt;
+&lt;div class=&quot;col-sm-9&quot;&gt;
+&lt;input type = &quot;text&quot; name=&quot;lastname&quot; id=&quot;lastname&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+( [A-Z][a-z]+)?&quot;
+                title=&quot;Please enter a Surname (Second name optional) with First Letter capitalised&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+&lt;label for = &quot;county&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;County&lt;/label&gt;
+&lt;div class=&quot;col-sm-9&quot;&gt;
+&lt;input type = &quot;text&quot; name=&quot;county&quot; id=&quot;county&quot; class=&quot;form-control&quot; required pattern = &quot;[A-Z][a-z]+&quot; title =&quot;Please enter a valid county with First Letter capitalised&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+&lt;label for = &quot;email&quot; class=&quot;col-sm-3 col-form-label&quot;&gt;Email Address&lt;/label&gt;
+&lt;div class=&quot;col-sm-9&quot;&gt;
+&lt;input type = &quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; class=&quot;form-control&quot; required pattern = &quot;^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$&quot;
+     title=&quot;Please enter a valid email&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group row&quot;&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;input type=&quot;submit&quot; id=&quot;thesubmit&quot; value=&quot;Add Employee&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+~</code></pre>
+<p>This form is enclosed in code that produces the form iside a modal dialog:</p>
+<pre><code>&lt;div class=&quot;modal fade&quot; id =&quot;modalForm&quot;   role=&quot;dialog&quot;&gt;
+&lt;div class=&quot;modal-dialog&quot;&gt;
+&lt;div class=&quot;modal-content&quot;&gt;
+&lt;div class=&quot;modal-header&quot;&gt;
+&lt;h1&gt;Add Employee&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div class= modal-body&gt;
+&lt;form name = &#39;emplist&#39; id = &quot;emplist&quot; &gt;
+...
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
       </div>
      

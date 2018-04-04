@@ -34,13 +34,13 @@ $("#content-placeholder").html(theCompiledHtml);
 
 $('#emplist').submit(function() {
 
- newemp= {
+newemp= {
 	 id:$('#id').val(),
 	 firstname:$('#firstname').val(),
 	 lastname:$('#lastname').val(),
 	 county:$('#county').val(),
 	 email:$('#email').val()
- }
+}
 
 
  employee.push(newemp);
