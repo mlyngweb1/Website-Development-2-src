@@ -9,7 +9,7 @@
 <script id="some-template" type="text/x-handlebars-template">
   <ul>
   {{#each people}}
-        <li>{{name}} - {{../group}}</li>
+        <li>{{upper name}} - {{../group}}</li>
     {{/each}}
   </ul>
 </script>
@@ -23,11 +23,19 @@ $(document).ready(function() {
 var source   = $("#some-template").html();
 var template = Handlebars.compile(source);
 var data = { people: [
-    {name: "Alan"},
-    {name: "Allison"},
-    {name: "Ryan"}
+    {name: "alan murphy"},
+    {name: "Allison Doyle"},
+    {name: "Ryan Smith"}
   ], group: "Bloggers" };
 
+Handlebars.registerHelper('upper', function(str) {
+  data=str.split(" ");
+  formattedname="";
+  for (i in data) {
+     formattedname+= data[i].charAt(0).toUpperCase() + data[i].substring(1,).toLowerCase() + " ";
+  }
+  return formattedname;
+});
 
 // Pass our data to the template
 var theCompiledHtml = template(data);

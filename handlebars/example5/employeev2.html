@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html  lang="en" >
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Employee</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<script id="some-template" type="text/x-handlebars-template">
 
-       <link href="css/gemstore.css" rel="stylesheet">
-  </head>
-  <body>
- <script id="some-template" type="text/x-handlebars-template">
-
-  <div class="container">
-    <header>
+<div class="container">
+<header>
       <h1 class="text-center">{{dept}}</h1>
-    </header>
-    <button class="pull-right btn btn-primary" id="btncall" data-toggle="modal" data-target="#modalForm">Add Employee</button>
-
+      <button class="float-right btn btn-primary" id="btncall" data-toggle="modal" data-target="#modalForm">Add Employee</button>
+</header>
+<section>
 <table class="table table-hover table-striped" >
 <thead>
 <tr>
@@ -37,11 +36,13 @@
 {{/each}}
 </tbody>
 </table>
+</section>
 
+</div>
+</script>
 
-    </div>
-    </script>
-    <div id = "content-placeholder"></div>
+<div id = "content-placeholder"></div>
+
 <div class="modal" id ="modalForm"  tabindex="-1" role="dialog">
 <div class="modal-dialog">
 <div class="modal-content">
