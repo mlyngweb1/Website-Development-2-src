@@ -25,12 +25,6 @@
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
-// Retrieve the template data from the HTML (jQuery is used here).
-var template = $('#handlebars-demo').html();
-
-// Compile the template data into a function
-var templateScript = Handlebars.compile(template);
-
 var superhero = {
       "name": "Madame Uppercut",
       "age": 39,
@@ -40,7 +34,13 @@ var superhero = {
         "Damage resistance",
         "Superhuman reflexes"
       ]
-    }
+}
+
+// Retrieve the template data from the HTML (jQuery is used here).
+var template = $('#handlebars-demo').html();
+
+// Compile the template data into a function
+var templateScript = Handlebars.compile(template);
 
 var html = templateScript(superhero);
 

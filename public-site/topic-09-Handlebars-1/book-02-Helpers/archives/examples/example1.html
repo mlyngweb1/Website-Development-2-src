@@ -19,12 +19,6 @@
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
-// Retrieve the template data from the HTML (jQuery is used here).
-var template = $('#handlebars-demo').html();
-
-// Compile the template data into a function
-var templateScript = Handlebars.compile(template);
-
 var employees = {
   "country":"USA",
   "names" : [
@@ -32,6 +26,12 @@ var employees = {
     {"firstName":"John","lastName":"Doe"}
   ]
 }
+
+// Retrieve the template data from the HTML (jQuery is used here).
+var template = $('#handlebars-demo').html();
+
+// Compile the template data into a function
+var templateScript = Handlebars.compile(template);
 
 var html = templateScript(employees);
 

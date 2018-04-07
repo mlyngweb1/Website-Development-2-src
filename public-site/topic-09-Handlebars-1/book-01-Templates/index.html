@@ -436,19 +436,22 @@ In the following example, we will use the <code>ID</code> of the template for th
 When the execution is complete, the function returns the desired HTML with all the variables replaced by their corresponding values. 
 At this point we can inject the HTML into our web page.</p>
 <p>Turning this description into code results in the following snippet:</p>
-<pre><code>// Retrieve the template data from the HTML (jQuery is used here).
+<pre><code>var context = {
+   &quot;name&quot; : &quot;Ritesh Kumar&quot;,
+   &quot;occupation&quot; : &quot;developer&quot;
+};
+
+// Retrieve the template data from the HTML (jQuery is used here).
 var template = $(&#39;#handlebars-demo&#39;).html();
 
 // Compile the template data into a function
 var templateScript = Handlebars.compile(template);
 
-var context = { &quot;name&quot; : &quot;Ritesh Kumar&quot;, &quot;occupation&quot; : &quot;developer&quot; };
-
 // html = &#39;My name is Ritesh Kumar. I am a developer.&#39;
 var html = templateScript(context);
 
 // Insert the HTML code into the page
-$(document.body).append(html);</code></pre>
+$(document.body).append(html);});</code></pre>
 <p>A demo of this code can be found in this <a href ="archives/examples/example1.html" target="_blank">example</a>.</p>
 
       </div>

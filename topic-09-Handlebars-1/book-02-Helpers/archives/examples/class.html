@@ -3,16 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>if Helper</title>
+  <title>Class Example</title>
 </head>
 
 <body>
 <script id="handlebars-demo" type="text/x-handlebars-template">
-{{#if countries}}
-  The countries are present.
-{{else}}
-  The countries are not present.
-{{/if}}
+<h1>{{smoothie}}</h1>
+<ul>
+{{#each ingredients}}
+<li>{{qty}} {{name}}</li>
+{{/each}}
+</ul>
+
+<ol>
+{{#each instructions}}
+<li>{{this}}</li>
+{{/each}}
+</ol>
 </script>
 
 
@@ -21,8 +28,16 @@
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
-var data = {
-  "countries": []
+var recipe = {
+  "smoothie":"Carrot Mango Coconut",
+  "ingredients" : [
+    {"qty":"1 large","name":"carrot"},
+    {"qty":"1 cup","name":"frozen mango"},
+    {"qty":"1-2 tablespoons", "name":"unsweetened shredded coconut"}
+  ],
+  "instructions":[
+  "Grate the carrot", "Blend together in a liquidiser with some water"
+  ]
 }
 
 // Retrieve the template data from the HTML (jQuery is used here).
@@ -31,7 +46,7 @@ var template = $('#handlebars-demo').html();
 // Compile the template data into a function
 var templateScript = Handlebars.compile(template);
 
-var html = templateScript(data);
+var html = templateScript(recipe);
 
 // Insert the HTML code into the page
 $(document.body).append(html);});

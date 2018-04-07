@@ -9,7 +9,7 @@
 <body>
 <script id="handlebars-demo" type="text/x-handlebars-template">
 <div>
-  <h1>{{upper title}}</h1>
+  <h1>{{title}}</h1>
 
   {{#with author}}
   <h2>By {{firstName}} {{lastName}}</h2>
@@ -26,12 +26,6 @@
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
-// Retrieve the template data from the HTML (jQuery is used here).
-var template = $('#handlebars-demo').html();
-
-// Compile the template data into a function
-var templateScript = Handlebars.compile(template);
-
 var blog = {
   title: "My first post!",
   author: {
@@ -43,6 +37,12 @@ var blog = {
     lastName:"York"
   }
 }
+
+// Retrieve the template data from the HTML (jQuery is used here).
+var template = $('#handlebars-demo').html();
+
+// Compile the template data into a function
+var templateScript = Handlebars.compile(template);
 
 var html = templateScript(blog);
 

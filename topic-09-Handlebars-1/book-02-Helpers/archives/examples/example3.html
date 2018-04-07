@@ -21,15 +21,15 @@
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
+var context = {
+  "countries": []
+}
+
 // Retrieve the template data from the HTML (jQuery is used here).
 var template = $('#handlebars-demo').html();
 
 // Compile the template data into a function
 var templateScript = Handlebars.compile(template);
-
-var context = {
-  "countries": []
-}
 
 var html = templateScript(context);
 
