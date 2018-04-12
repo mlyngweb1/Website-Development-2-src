@@ -418,7 +418,7 @@ body
      
       <div  class="ui tab segment lab" data-tab="01">
         <h1>Employee Form</h1>
-<p>In this <a href="archives/examples/employee.html" target="_blank">example</a> which display employee records from a JSON object. The web page also includes 
+<p>In this <a href="archives/examples/employee.html" target="_blank">example</a> which displays employee records from a JSON object. The web page also includes 
 a button that will open a form inside a modal dialog if we want to add a new employee.</p>
 <pre><code>&lt;button class=&quot;float-right btn btn-primary&quot; id=&quot;btncall&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modalForm&quot;&gt;Add Employee&lt;/button&gt;</code></pre>
 <p>The following form contains text boxes (validated), which allow the user to enter Employee data:</p>
@@ -464,7 +464,7 @@ a button that will open a form inside a modal dialog if we want to add a new emp
 &lt;/div&gt;
 &lt;/form&gt;
 ~</code></pre>
-<p>This form is enclosed in code that opens the form inside a modal dialog (this is a Bootstrap feature):</p>
+<p>The code for the form above is enclosed in code that will open the form inside a modal dialog (this is a Bootstrap feature), when requested to:</p>
 <pre><code>&lt;div class=&quot;modal fade&quot; id =&quot;modalForm&quot;   role=&quot;dialog&quot;&gt;
 &lt;div class=&quot;modal-dialog&quot;&gt;
 &lt;div class=&quot;modal-content&quot;&gt;
@@ -485,10 +485,7 @@ a button that will open a form inside a modal dialog if we want to add a new emp
       <div  class="ui tab segment lab" data-tab="02">
         <h1>JavaScript required</h1>
 <p>The code to display the JSON data is as follows:</p>
-<pre><code>var source   = $(&quot;#some-template&quot;).html();
-var template = Handlebars.compile(source);
-
-var employee = [
+<pre><code>var employee = [
         {
             &#39;id&#39;:1,
             &#39;firstname&#39;: &quot;Fred&quot;,
@@ -510,36 +507,34 @@ var employee = [
             &#39;county&#39;:&#39;Waterford&#39;,
             &#39;email&#39;:&#39;samdunne@gmail.com&#39;
         }
-];
+  ];
 
+var source   = $(&quot;#some-template&quot;).html();
+var template = Handlebars.compile(source);
 var theCompiledHtml = template(employee);
-
 $(&quot;#content-placeholder&quot;).html(theCompiledHtml);</code></pre>
 <h2>Add an Employee</h2>
-<p>When the user enters employee data (id, firstname, lastname, county, and email) and then clicks the submit (Add Employee) button the text box data is put together into a new object, and this new object is pushed onto the employee array. The page is then refreshed
+<p>When the user enters employee data (id, firstname, lastname, county, and email) and then clicks the submit (Add Employee) button the text box data is put together 
+into a new object, and this new object is pushed onto the employee array. The page is then refreshed
 including the new employee object. The modal dialog is hidden and the text boxes are cleared.</p>
 <pre><code>$(&#39;#emplist&#39;).submit(function() {
-
- newemp= {
+  newemp= {
      id:$(&#39;#id&#39;).val(),
      firstname:$(&#39;#firstname&#39;).val(),
      lastname:$(&#39;#lastname&#39;).val(),
      county:$(&#39;#county&#39;).val(),
      email:$(&#39;#email&#39;).val()
- }
- employee.push(newemp);
+  }
 
- var theCompiledHtml = template(employee);
- $(&quot;#content-placeholder&quot;).html(theCompiledHtml);
-
- $(&#39;#modalForm&#39;).modal(&#39;hide&#39;);
-
- $(&#39;input[type=&quot;text&quot;]&#39;).each(function() {
+  employee.push(newemp);
+  var theCompiledHtml = template(employee);
+  $(&quot;#content-placeholder&quot;).html(theCompiledHtml);
+  $(&#39;#modalForm&#39;).modal(&#39;hide&#39;);
+  $(&#39;input[type=&quot;text&quot;]&#39;).each(function() {
         $(this).val(&quot;&quot;);
- });
- $(&#39;input[type=&quot;email&quot;]&#39;).val(&quot;&quot;);
-
- return false;
+  });
+  $(&#39;input[type=&quot;email&quot;]&#39;).val(&quot;&quot;);
+  return false;
 });</code></pre>
 
       </div>

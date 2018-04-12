@@ -450,23 +450,30 @@ access your helper. With custom helpers, we can add any kind or JavaScript logic
 <p>Let us consider the template below:</p>
 <pre><code>&lt;div&gt;
   &lt;h1&gt;By {{fullName author}}&lt;/h1&gt;
-  &lt;div class=&quot;body&quot;&gt;{{body}}&lt;/div&gt;
+  &lt;p&gt;{{message}}&lt;/p&gt;
 
-  &lt;h1&gt;Comments&lt;/h1&gt;
-
+  &lt;h3&gt;Comments&lt;/h3&gt;
+  &lt;ul&gt;
   {{#each comments}}
-  &lt;h2&gt;By {{fullName author}}&lt;/h2&gt;
-  &lt;div class=&quot;body&quot;&gt;{{body}}&lt;/div&gt;
+    &lt;li&gt;
+     &lt;b&gt;{{fullName author}}&lt;/b&gt; -- {{reply}}
+    &lt;/li&gt;
   {{/each}}
+  &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
 <p>If we provide the following context variable:</p>
-<pre><code>var context = {
+<pre><code>var data = {
   author: {firstName: &quot;Alan&quot;, lastName: &quot;Johnson&quot;},
-  body: &quot;I Love Handlebars&quot;,
+  message: &quot;I Love Handlebars&quot;,
   comments: [{
     author: {firstName: &quot;Yehuda&quot;, lastName: &quot;Katz&quot;},
-    body: &quot;Me too!&quot;
-  }]
+    reply: &quot;Me too!&quot;
+  },
+  {
+    author: {firstName: &quot;Atlanta&quot;, lastName: &quot;Yates&quot;},
+    reply: &quot;Easy to understand!&quot;
+  }
+  ]
 };</code></pre>
 <p>and, custom Helper</p>
 <pre><code>Handlebars.registerHelper(&#39;fullName&#39;, function(person) {
@@ -495,9 +502,12 @@ access your helper. With custom helpers, we can add any kind or JavaScript logic
           &lt;td&gt;{{age}} &lt;/td&gt;
           &lt;td&gt;{{secretIdentity}}&lt;/td&gt;
           &lt;td&gt;{{numPowers powers}}&lt;/td&gt;
-          &lt;td&gt;{{#each powers}}&lt;ul&gt;
-          &lt;li&gt;{{this}}&lt;/li&gt;
-          &lt;/ul&gt;{{/each}}
+          &lt;td&gt;
+          {{#each powers}}
+           &lt;ul&gt;
+            &lt;li&gt;{{this}}&lt;/li&gt;
+           &lt;/ul&gt;
+          {{/each}}
         &lt;/tr&gt;
       {{/each}}
     &lt;/tbody&gt;

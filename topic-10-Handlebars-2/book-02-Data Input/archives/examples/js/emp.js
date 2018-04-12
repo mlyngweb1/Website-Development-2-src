@@ -1,9 +1,4 @@
 $(document).ready(function() {
-
-
-var source   = $("#some-template").html();
-var template = Handlebars.compile(source);
-
 var employee = [
         {
             'id':1,
@@ -28,35 +23,30 @@ var employee = [
 	    }
   ];
 
+var source   = $("#some-template").html();
+var template = Handlebars.compile(source);
 var theCompiledHtml = template(employee);
-
 $("#content-placeholder").html(theCompiledHtml);
 
 $('#emplist').submit(function() {
-
-newemp= {
+  newemp= {
 	 id:$('#id').val(),
 	 firstname:$('#firstname').val(),
 	 lastname:$('#lastname').val(),
 	 county:$('#county').val(),
 	 email:$('#email').val()
-}
+  }
 
-
- employee.push(newemp);
- var theCompiledHtml = template(employee);
- $("#content-placeholder").html(theCompiledHtml);
-
- $('#modalForm').modal('hide');
-
- $('input[type="text"]').each(function() {
+  employee.push(newemp);
+  var theCompiledHtml = template(employee);
+  $("#content-placeholder").html(theCompiledHtml);
+  $('#modalForm').modal('hide');
+  $('input[type="text"]').each(function() {
 		$(this).val("");
- });
- $('input[type="email"]').val("");
-
- return false;
+  });
+  $('input[type="email"]').val("");
+  return false;
 });
-
 });
 
 

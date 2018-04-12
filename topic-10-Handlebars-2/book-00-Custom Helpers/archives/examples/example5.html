@@ -20,6 +20,12 @@
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
+var data = { people: [
+    {name: "alan murphy"},
+    {name: "Allison Doyle"},
+    {name: "Ryan Smith"}
+  ], group: "Bloggers" };
+
 Handlebars.registerHelper('capitalise', function(str) {
   data=str.split(" ");
   formattedname="";
@@ -31,15 +37,7 @@ Handlebars.registerHelper('capitalise', function(str) {
 
 var source   = $("#some-template").html();
 var template = Handlebars.compile(source);
-var data = { people: [
-    {name: "alan murphy"},
-    {name: "Allison Doyle"},
-    {name: "Ryan Smith"}
-  ], group: "Bloggers" };
-
-// Pass our data to the template
 var theCompiledHtml = template(data);
-
  $("#content-placeholder").html(theCompiledHtml);
 });
 </script>

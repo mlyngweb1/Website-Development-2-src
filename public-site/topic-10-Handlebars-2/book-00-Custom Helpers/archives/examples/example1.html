@@ -4,52 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <title>Custom Helper - Example One</title>
+  <style>
+  li {
+    font-size:120%;
+    font-style:italic;
+  }
+  </style>
 </head>
 
 <body>
 <script id="handlebars-demo" type="text/x-handlebars-template">
 <div>
   <h1>By {{fullName author}}</h1>
-  <div class="body">{{body}}</div>
+  <p>{{message}}</p>
 
-  <h1>Comments</h1>
-
+  <h3>Comments</h3>
+  <ul>
   {{#each comments}}
-  <h2>By {{fullName author}}</h2>
-  <div class="body">{{body}}</div>
+    <li>
+     <b>{{fullName author}}</b> -- {{reply}}
+    </li>
   {{/each}}
+  </ul>
 </div>
 </script>
-
-
 
 <script src='js/jquery-3.1.1.min.js'></script>
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
+var data = {
+  author: {firstName: "Alan", lastName: "Johnson"},
+  message: "I Love Handlebars",
+  comments: [{
+    author: {firstName: "Yehuda", lastName: "Katz"},
+    reply: "Me too!"
+  },
+  {
+    author: {firstName: "Atlanta", lastName: "Yates"},
+    reply: "Easy to understand!"
+  }
+  ]
+};
+
 Handlebars.registerHelper('fullName', function(person) {
   return person.firstName + " " + person.lastName;
 });
 
+var template = Handlebars.compile($('#handlebars-demo').html());
 
-var template = $('#handlebars-demo').html();
+var html = template(data);
 
-
-var templateScript = Handlebars.compile(template);
-
-var context = {
-  author: {firstName: "Alan", lastName: "Johnson"},
-  body: "I Love Handlebars",
-  comments: [{
-    author: {firstName: "Yehuda", lastName: "Katz"},
-    body: "Me too!"
-  }]
-};
-
-
-var html = templateScript(context);
-
-// Insert the HTML code into the page
 $(document.body).append(html);});
 </script>
 </body>

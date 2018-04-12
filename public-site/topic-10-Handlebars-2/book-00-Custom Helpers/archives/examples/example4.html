@@ -20,12 +20,6 @@
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
-Handlebars.registerHelper('upper', function(str) {
-  return str.toUpperCase();
-});
-
-var source   = $("#some-template").html();
-var template = Handlebars.compile(source);
 var data = { people: [
     {name: "alan murphy"},
     {name: "Allison Doyle"},
@@ -34,9 +28,13 @@ var data = { people: [
 group: "Bloggers"
 };
 
-// Pass our data to the template
-var theCompiledHtml = template(data);
+Handlebars.registerHelper('upper', function(str) {
+  return str.toUpperCase();
+});
 
+var source   = $("#some-template").html();
+var template = Handlebars.compile(source);
+var theCompiledHtml = template(data);
  $("#content-placeholder").html(theCompiledHtml);
 });
 </script>

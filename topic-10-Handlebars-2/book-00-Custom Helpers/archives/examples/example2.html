@@ -23,9 +23,12 @@
           <td>{{age}} </td>
           <td>{{secretIdentity}}</td>
           <td>{{numPowers powers}}</td>
-          <td>{{#each powers}}<ul>
-          <li>{{this}}</li>
-          </ul>{{/each}}
+          <td>
+          {{#each powers}}
+           <ul>
+            <li>{{this}}</li>
+           </ul>
+          {{/each}}
         </tr>
       {{/each}}
     </tbody>
@@ -37,18 +40,6 @@
 <script src='js/handlebars.min.js'></script>
 <script>
 $(document).ready(function() {
-Handlebars.registerHelper('numPowers', function(powers) {
-  var cnt=0;
-  for (i in powers) {
-	  cnt++;
-  }
-  return cnt;
-});
-
-var source   = $("#some-template").html();
-
-  var template = Handlebars.compile(source);
-
   var superheroes = {
   "squadName": "Super hero squad",
   "homeTown": "Metro City",
@@ -91,10 +82,21 @@ var source   = $("#some-template").html();
   ]
 }
 
+Handlebars.registerHelper('numPowers', function(powers) {
+  var cnt=0;
+  for (i in powers) {
+	  cnt++;
+  }
+  return cnt;
+});
 
-	  var theCompiledHtml = template(superheroes);
+var source   = $("#some-template").html();
 
-  $("#content-placeholder").html(theCompiledHtml);
+var template = Handlebars.compile(source);
+
+var theCompiledHtml = template(superheroes);
+
+$("#content-placeholder").html(theCompiledHtml);
 });
 
 </script>
