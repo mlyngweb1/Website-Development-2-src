@@ -468,12 +468,39 @@ a <em>compiled template</em> as its second argument. </p>
 <p>In the following example we create a partial that includes code that is common on each web page of a web site.</p>
 <pre><code>Handlebars.registerPartial(&quot;headersection&quot;, &#39;&lt;header&gt;&lt;h1&gt;BubbleUnder.com&lt;/h1&gt;&lt;/header&gt;&#39; +
 &#39;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;&#39; +
-&#39;&lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&#39;);</code></pre>
+&#39;&lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;events.html&quot;&gt;Club Events&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&#39;);</code></pre>
 <p>Let us consider the template below that is used in each web page. The partial (header and nav that is common on all pages) is included on each page:</p>
 <pre><code>&lt;script id=&quot;handlebars-demo&quot; type=&quot;text/x-handlebars-template&quot;&gt;
   {{&gt; headersection}}
+  ...
 &lt;/script&gt;</code></pre>
-<p>We will obtain the result as in the following <a href ="archives/examples/index.html" target="_blank">example</a>.</p>
+<p>If we also provide the following context variable (JSON object):</p>
+<pre><code>var clubevents = {
+  title: &#39;Club events/dive trips for the next six months&#39;,
+  events: [
+    {date: &quot;12 July&quot;, desc: &quot;Committee meeting, deciding on next year&#39;s trips&quot;, contact:&quot;Bob Dobalina&quot;},
+    {date: &quot;19 July&quot;, desc: &quot;7-day trip to Hurghada (package deal) - limited spaces&quot;, contact:&quot;Bob Dobalina&quot;},
+    {date: &quot;5 August&quot;, desc: &quot;Ocean &amp;amp; Sports Diver Theory Course&quot;, contact:&quot;Jeff Edgely&quot;},
+    {date: &quot;12 August&quot;, desc: &quot;Murder Mystery Weekend, Cotswolds (no diving!&quot;, contact:&quot;Jill Smith&quot;}
+  ]
+}</code></pre>
+<p>The template below is used in <em>events.html</em> that utilises the JSON object:</p>
+<pre><code>&lt;section&gt;
+ &lt;h2&gt;Club Events&lt;/h2&gt;
+
+ &lt;table&gt;
+ &lt;caption&gt;{{title}}&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;&lt;th&gt;Date&lt;/th&gt;&lt;th&gt;Event Description&lt;/th&gt;&lt;th&gt;Contact&lt;/th&gt;&lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+  {{#each events}}
+   &lt;tr&gt;&lt;td&gt;{{date}}&lt;/td&gt;&lt;td&gt;{{desc}}&lt;/td&gt;&lt;td&gt;{{contact}}&lt;/td&gt;&lt;/tr&gt;
+  {{/each}}
+ &lt;/tbody&gt;
+ &lt;/table&gt;
+&lt;/section&gt;</code></pre>
+<p>We will obtain the result as in the following <a href ="archives/examples/bubbleunder/index.html" target="_blank">example</a>.</p>
 
       </div>
      
