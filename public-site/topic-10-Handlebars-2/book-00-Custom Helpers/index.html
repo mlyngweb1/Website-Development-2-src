@@ -568,12 +568,12 @@ access your helper. With custom helpers, we can add any kind or JavaScript logic
      
       <div  class="ui tab segment lab" data-tab="04">
         <h1>Example Three</h1>
-<p>This example just calls a function to return the total score for each student.</p>
+<p>This example just calls a function to return the average score for each student.</p>
 <p>Let us consider the template below:</p>
 <pre><code>  &lt;table border=&quot;1&quot;&gt;
     &lt;thead&gt;
       &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Total Score&lt;/th&gt;
+      &lt;th&gt;Average Score&lt;/th&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
       {{#each this}}
@@ -601,7 +601,8 @@ access your helper. With custom helpers, we can add any kind or JavaScript logic
    for (i in score) {
          total+=score[i];
    }
-   return total;
+   var avg=Math.round(total/score.length);
+   return avg;
  });</code></pre>
 <p>We will obtain the result as in the following <a href ="archives/examples/example3.html" target="_blank">example</a>.</p>
 

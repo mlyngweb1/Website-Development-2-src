@@ -11,7 +11,7 @@
   <table border="1">
     <thead>
       <th>Name</th>
-      <th>Total Score</th>
+      <th>Average Score</th>
     </thead>
     <tbody>
       {{#each this}}
@@ -47,7 +47,8 @@ var data = [
    for (i in score) {
  	    total+=score[i];
    }
-   return total;
+   var avg=Math.round(total/score.length);
+   return avg;
  });
 
 
