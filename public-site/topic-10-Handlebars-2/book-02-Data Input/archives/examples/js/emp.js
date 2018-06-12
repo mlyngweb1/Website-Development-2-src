@@ -36,7 +36,6 @@ $('#emplist').submit(function() {
 	 county:$('#county').val(),
 	 email:$('#email').val()
   }
-
   employee.push(newemp);
   var theCompiledHtml = template(employee);
   $("#content-placeholder").html(theCompiledHtml);

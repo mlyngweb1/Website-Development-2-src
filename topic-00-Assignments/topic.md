@@ -1,3 +1,3 @@
 Assignments
 
-Specifications for Assignments 1 & 2
+Specifications for Assignments 1 & 2; and the repeat CA
